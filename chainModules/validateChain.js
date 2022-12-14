@@ -1,6 +1,7 @@
 //Takes blockchain variable, or name of localStorage variable for the blockchain
 
 export default async function validateChain(){
+    console.log("validerar");
     //Fetches current chain from localStorage
     //For block in chain
         //check if calculateHash(block) == block.hash

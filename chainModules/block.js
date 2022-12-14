@@ -1,16 +1,18 @@
 //class for block
+import calculateHash from "./calculateHash.js";
 export default class block {
     //Has info such as
     //index
     //data
     //bet values (Public)
-    //bet
-    //odds
-    //win
-    //payout
+        //bet (red, black, odd, even)
+        //odds
+        //win
+        //payout
+        //result
     //user (Private)
-    //username/UUID
-    //balance before and after trade?
+        //username/UUID
+        //balance before and after trade?
     //timestamp
     //hash of previous block
     //hash
@@ -23,6 +25,6 @@ export default class block {
         this.data = data;
         this.timestamp = Date.now();
         this.prevHash = prevHash;
-        this.hash = calculateHash();
+        this.hash = calculateHash(this, prevHash);
     }
 }
