@@ -1,64 +1,58 @@
 [
     {
-        "data": {
-            "roll": {
-                "number": 5,
-                "color": "red",
-                "parity": "odd"
-            },
-            "user": {
-                "UUID": "0000-0000-0000-0000",
-                "username": "mr gamble",
-                "balance": 100,
-                "bet": {
-                    "bet": "5",
-                    "wager": "2.00",
-                    "win": true,
-                    "payout_rate": 36,
-                    "payout": "74.00"
-                }
+        "roll": {
+            "number": 5,
+            "color": "red",
+            "parity": "odd"
+        },
+        "user": {
+            "UUID": "0000-0000-0000-0000",
+            "username": "mr gamble",
+            "balance": 100,
+            "bet": {
+                "bet": "5",
+                "wager": "2.00",
+                "win": true,
+                "payout_rate": 36,
+                "payout": "74.00"
             }
         }
     },
     {
-        "data": {
-            "roll": {
-                "number": 5,
-                "color": "red",
-                "parity": "odd"
-            },
-            "user": {
-                "UUID": "0000-0000-0000-0001",
-                "username": "mr bet",
-                "balance": 100,
-                "bet": {
-                    "bet": "odd",
-                    "wager": "2.00",
-                    "win": true,
-                    "payout_rate": 1,
-                    "payout": "4.00"
-                }
+        "roll": {
+            "number": 5,
+            "color": "red",
+            "parity": "odd"
+        },
+        "user": {
+            "UUID": "0000-0000-0000-0001",
+            "username": "mr bet",
+            "balance": 100,
+            "bet": {
+                "bet": "odd",
+                "wager": "2.00",
+                "win": true,
+                "payout_rate": 1,
+                "payout": "4.00"
             }
         }
     },
     {
-        "data": {
-            "roll": {
-                "number": 5,
-                "color": "red",
-                "parity": "odd"
-            },
-            "user": {
-                "UUID": "0000-0000-0000-0001",
-                "username": "mr green",
-                "balance": 100,
-                "bet": {
-                    "bet": "odd",
-                    "wager": "2.00",
-                    "win": true,
-                    "payout_rate": 1,
-                    "payout": "4.00"
-                }
+        "roll": {
+            "number": 5,
+            "color": "red",
+            "parity": "odd"
+        },
+        "user": {
+            "UUID": "0000-0000-0000-0001",
+            "username": "mr green",
+            "balance": 100,
+            "bet": {
+                "bet": "odd",
+                "wager": "2.00",
+                "win": true,
+                "payout_rate": 1,
+                "payout": "4.00"
             }
         }
     }

@@ -11,7 +11,7 @@ console.log("beep");
 // console.log(testBlock);
 
 let chain = new chains();
-console.log(lagomChain.validateChain());
+console.log(chain.validateChain());
 
 
 if (!localStorage.getItem("blockchain")) {
@@ -23,7 +23,7 @@ if (!localStorage.getItem("blockchain")) {
         .then(result => result.json())
         .then(data => {
             console.log(data.length);
-            addHistory(data, lagomChain);
+            addHistory(data, chain);
             //localStorage.setItem("blockchain", JSON.stringify(data))
         })
     //add to localStorage

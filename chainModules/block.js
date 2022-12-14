@@ -23,7 +23,7 @@ export default class block {
         this.index = index;
         //The betting data in JSON format?
         this.data = data;
-        this.timestamp = Date.now();
+        this.timeStamp = Date.now();
         this.prevHash = prevHash;
         this.hash = calculateHash(this, prevHash);
     }

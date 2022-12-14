@@ -18,11 +18,10 @@ export default async function addBlock(chain, blockData) {
         //With user information being encrypted
     //newBlock.data = blockData;
     //timestamp = Date.now();
-    newBlock.timestamp = Date.now();
     //Get previous block's hash value
-    newBlock.prevHash = ""; //lastBlock.hash;
+    newBlock.prevHash = chain.blockchain[chain.blockchain.length-1].hash; //lastBlock.hash;
     //Generate new hash value with calculateHash
-    newBlock.hash = await calculateHash(newBlock, newBlock.prevHash);
+    newBlock.hash = await calculateHash(newBlock);
 
     //Add block to chain
     //chain.blockchain.push(newBlock);
