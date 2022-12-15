@@ -19,3 +19,12 @@ Accessibility: Crypto casinos are accessible from anywhere in the world, as long
 Conclusion:
 
 Crypto casinos offer a unique and exciting way to gamble online, with fast and secure transactions, anonymity, and accessibility. These casinos are poised to become the future of online gambling, offering players a more convenient and secure way to enjoy their favorite games.
+
+Made by:
+---
+Felix Holmberg [@felle64](https://github.com/felle64)<br>
+Lars Lundin [@larsyngvelundin](https://github.com/larsyngvelundin)<br>
+Mirelle Wallgren [aleczks](https://github.com/aleczks)<br>
+Oscar Recén Larsson [@oscarrecenlarsson](https://github.com/oscarrecenlarsson)<br>
+Ellen Lång [@EllenLng](https://github.com/EllenLng)<br>
+Anton Henningsson [@SWEanton](https://github.com/SWEanton)
