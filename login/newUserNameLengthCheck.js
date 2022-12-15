@@ -1,13 +1,13 @@
-export default function newUserNameLengthCheck(newUserName) {
+export default function newUsernameLengthCheck(newUsername) {
     let mnlen = 4;
     let mxlen = 10;
-    let errorBoxNewUserNameLength = document.getElementById("errorBoxNewUserNameLength");
-    if (newUserName.value.length < mnlen || newUserName.value.length > mxlen) {
-        errorBoxNewUserNameLength.innerHTML = ("Username needs to be " + mnlen + " to " + mxlen + " characters.");
+    let errorBoxNewUsernameLength = document.getElementById("errorBoxNewUsernameLength");
+    if (newUsername.value.length < mnlen || newUsername.value.length > mxlen) {
+        errorBoxNewUsernameLength.innerHTML = ("Username needs to be " + mnlen + " to " + mxlen + " characters.");
         return false;
     }
     else {
-        errorBoxNewUserNameLength.innerHTML = "";
+        errorBoxNewUsernameLength.innerHTML = "";
         return true;
     }
 }
