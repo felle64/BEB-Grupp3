@@ -5,8 +5,7 @@ export default function newUsernameLengthCheck(newUsername) {
     if (newUsername.length < mnlen || newUsername.length > mxlen) {
         errorBoxNewUsernameLength.innerHTML = ("Username needs to be " + mnlen + " to " + mxlen + " characters.");
         return false;
-    }
-    else {
+    } else {
         errorBoxNewUsernameLength.innerHTML = "";
         return true;
     }

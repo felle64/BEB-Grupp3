@@ -2,8 +2,17 @@ import block from "./chainModules/block.js";
 import chains from "./chainModules/chains.js"
 import addBlock from "./chainModules/addBlock.js"
 import addHistory from "./chainModules/mockData/addHistory.js";
+import initPage from "./printModules/initPage.js";
+import initUsers from "./userModules/initUsers.js";
 
 console.log("beep");
+
+
+
+initUsers();
+initPage();
+
+
 
 // console.log("block",block);
 
@@ -31,3 +40,4 @@ if (!localStorage.getItem("blockchain")) {
 else {
     //load blockchain
 }
+
