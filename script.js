@@ -4,9 +4,14 @@ import addBlock from "./chainModules/addBlock.js"
 import addHistory from "./chainModules/mockData/addHistory.js";
 import initPage from "./printModules/initPage.js";
 import initUsers from "./userModules/initUsers.js";
+import getResult from "./bettingModules/api.js";
+
+let wagerInput = 1
+let betInput = "red"
 
 console.log("beep");
-
+let data = await getResult(wagerInput, betInput)
+console.log(data);
 
 
 initUsers();
