@@ -15,10 +15,31 @@ betBtn.addEventListener("click", () => getResult());
 function getResult() {
     console.log(wagerInput.value);
     console.log(betInput.value);
-    console.log(`http://80.98.140.31:5001/api/play?wager=${wagerInput.value}&bet=${betInput.value}`);
-    fetch(`http://80.98.140.31:5001/api/play?wager=${wagerInput.value}&bet=${betInput.value}`)
+    const apiUrl = `http://80.98.140.31:5001/api/play?wager=${wagerInput.value}&bet=${betInput.value}`
+    console.log(apiUrl);
+    fetch(apiUrl)
         .then(res => res.json())
         .then(data => {
-            console.log("data", data);
+            console.log("data", data);        
+            let result = data.success;
+            let win = data.roll.color;
+            let balance = data.bet.payoutRate;
+            let bet = data.bet.bet;
+            let wager = data.bet.wager;
+            let payout = data.bet.payout;
+            let resultDiv = document.getElementById("resultDiv");
+            resultDiv.innerHTML = `
+            <p>Placed bet: ${result}</p>
+            <p>Win: ${win}</p>
+            <p>Payout rate: ${balance}</p>
+            <p>Bet: ${bet}</p>
+            <p>Wager: ${wager}</p>
+            <p>Payout: ${payout}</p>
+            `
+        
+
+            
         })
 }
+
+export {getResult};
