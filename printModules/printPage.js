@@ -1,4 +1,4 @@
-import pageUnknownContent from "./pageContent/pageUnknown.js"
+import pageUnknownContent from "./pageContent/pageLoggedOut/pageUnknown/modules/pageUnknown.js"
 import createNewAccount from "../userModules/createNewUser/createNewAccountBtn.js";
 
 // Main function to display content in the "contentDiv" based on what state the page is in
