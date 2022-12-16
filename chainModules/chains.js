@@ -19,9 +19,8 @@ export default class chains{
     }
     
     async addBlock(blockData){
-        let newBlock = await addBlock(this, blockData);
+        await addBlock(this, blockData);
         
-        this.blockchain.push(newBlock);
         console.log("new block added?");
         console.log("blockchain", this.blockchain);
     }
