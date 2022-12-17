@@ -1,2 +1,2 @@
-//import buildWheel from "./printModules/pageContent/pageLoggedIn/modules/wheel.js";
+//import buildWheel from "./modules/wheel.js";
 // buildWheel();
