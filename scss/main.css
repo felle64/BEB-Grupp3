@@ -294,25 +294,36 @@
   left: 83px;
 }
 
-/* @-webkit-keyframes wheelRotate {
-  {transform: rotate(0deg);}
-} */
+@-webkit-keyframes wheelRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 
 @keyframes wheelRotate {
-from {transform: rotate(0deg);}
-
-to {
-  transform: rotate(359deg);
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
+@-webkit-keyframes ballRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-359deg);
+  }
 }
-/* @-webkit-keyframes ballRotate {
-  {transform: rotate(0deg);}
-} */
-
 @keyframes ballRotate {
-  from {transform: rotate(0deg);}
-
-to {
-  transform: rotate(-359deg);
-}
-}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-359deg);
+  }
+}/*# sourceMappingURL=main.css.map */
