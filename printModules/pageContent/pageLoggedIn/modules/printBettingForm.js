@@ -1,6 +1,5 @@
-export default printBettingForm(){
-
-
+import getResult from "../../../../bettingModules/getResult.js";
+export default function printBettingForm() {
 
     let contentDiv = document.getElementById('contentDiv');
     contentDiv.innerHTML = `<div>
