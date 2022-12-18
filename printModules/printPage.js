@@ -1,13 +1,15 @@
 import pageUnknownContent from "./pageContent/pageLoggedOut/pageUnknown/modules/pageUnknown.js"
 import createNewAccount from "../userModules/createNewUser/createNewAccountBtn.js";
+import logInSuccessContent from "./pageContent/pageLoggedIn/logInSuccessContent.js";
+import buildWheel from "./pageContent/pageLoggedIn/modules/wheel.js";
 
 // Main function to display content in the "contentDiv" based on what state the page is in
 export default function printPage(state) {
     let currentUser = "";
+    let contentDiv = document.getElementById('contentDiv');
     switch (state) {
         case "unknown": {
             // console.log("hi from unkown");
-            let contentDiv = document.getElementById('contentDiv');
             contentDiv.innerHTML = pageUnknownContent();
 
             let iWantToCreateAnAccountBtn = document.getElementById("iWantToCreateAnAccountBtn");
@@ -20,14 +22,9 @@ export default function printPage(state) {
         }
         case "logInSuccess": {
             // console.log("Hi from logInSuccess");
-            currentUser = localStorage.getItem("currentUser");
-            contentDiv.innerHTML = `
-        <h2>Welcome to the page ${currentUser}!</h2>
-        <p>You have successfully logged in and are now able to enjoy this custom quote.</p>
-        <q>Wake up, ${currentUser}... <br> The Matrix has you... <br> Follow the white rabbit. 
-        <br><br><br>
-        Knock, knock, ${currentUser}.
-        `;
+            console.log("logInSuccess");
+            contentDiv.innerHTML = logInSuccessContent();
+            buildWheel();
             break;
         }
         case "failedLogInAttempt": {

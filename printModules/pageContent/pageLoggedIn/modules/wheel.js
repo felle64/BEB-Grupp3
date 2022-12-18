@@ -1,9 +1,7 @@
 
 export default function buildWheel() {
 
-  let container = document.createElement('div');
-  container.setAttribute('id', 'container');
-  document.body.append(container);
+  let rouletteDiv = document.getElementById("rouletteDiv");
 
   let wheel = document.createElement('div');
   wheel.setAttribute('class', 'wheel');
@@ -54,7 +52,7 @@ export default function buildWheel() {
   thendTwo.setAttribute('class', 'thendTwo');
   turretHandle.append(thendTwo);
   wheel.append(turretHandle);
-  container.append(wheel);
+  rouletteDiv.append(wheel);
 }
 
 // function setBet(n, t, o){
