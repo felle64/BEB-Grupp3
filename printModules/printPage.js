@@ -3,6 +3,9 @@ import createNewAccount from "../userModules/createNewUser/createNewAccountBtn.j
 import logInSuccessContent from "./pageContent/pageLoggedIn/logInSuccessContent.js";
 import buildWheel from "./pageContent/pageLoggedIn/modules/wheel.js";
 import createNewUserText from "./pageContent/pageLoggedOut/createNewUserContent.js";
+import betBtnEl from "./pageContent/pageLoggedIn/modules/betBtn.js";
+
+
 
 
 // Main function to display content in the "contentDiv" based on what state the page is in
@@ -27,6 +30,14 @@ export default function printPage(state) {
             console.log("logInSuccess");
             contentDiv.innerHTML = logInSuccessContent();
             buildWheel();
+            let betBtn = document.getElementById("betBtn");
+            //let wagerInput = document.getElementById("wagerInput");
+            //let betInput = document.getElementById("betInput");
+            //let wagerInputValue = wagerInput.value;
+            //let betInputValue = betInput.value;
+            betBtn.addEventListener("click", betBtnEl);
+            //betBtnEl(wagerInput, betInput);
+           
             break;
         }
         case "failedLogInAttempt": {
