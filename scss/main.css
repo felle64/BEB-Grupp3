@@ -33,7 +33,7 @@
 }
 
 #sect1 .block {
-  background-color: green;
+  background-color: #016D29;
   transform: rotate(9.73deg);
 }
 
@@ -341,7 +341,7 @@ h2 {
 header {
   display: flex;
   flex-direction: row;
-  background: #ffee00;
+  background-color: red;
   height: 30px;
   padding: 10px;
 }
@@ -397,13 +397,4 @@ footer {
   bottom: 0;
   height: 30px;
   width: 100vw;
-}
-a {
-  margin-left: 15px;
-  color: #000;
-}
-
-
-
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
