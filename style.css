@@ -3,6 +3,7 @@ body{
     flex-direction: column;
     margin: 20px;
 }
+
 footer {
   position: fixed;
   bottom: 20px;

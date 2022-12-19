@@ -341,7 +341,7 @@ h2 {
 header {
   display: flex;
   flex-direction: row;
-  background: #ffee00;
+  background: #0e831e;
   height: 30px;
   padding: 10px;
 }
@@ -392,7 +392,7 @@ header div {
 }
 
 footer {
-  background-color: #aadd99;
+  background-color: #0e831e;
   position: absolute;
   bottom: 0;
   height: 30px;
