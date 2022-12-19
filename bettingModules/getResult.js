@@ -37,6 +37,7 @@ export default async function getResult(wagerInput, betInput) {
             <p>Payout: ${payout}</p>
             ` */
         })
+        .catch(err => console.log(err))
         return data
 }
 
