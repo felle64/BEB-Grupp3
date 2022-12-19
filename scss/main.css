@@ -33,7 +33,7 @@
 }
 
 #sect1 .block {
-  background-color: #016D29;
+  background-color: green;
   transform: rotate(9.73deg);
 }
 
@@ -366,7 +366,7 @@ header div {
 }
 
 #contentDiv {
-  background-color: #e88290;
+  background-color: green;
   height: calc(100vh - 80px);
   padding: 10px;
   display: flex;
@@ -392,9 +392,18 @@ header div {
 }
 
 footer {
-  background-color: #aadd99;
+  background-color: red;
   position: absolute;
   bottom: 0;
   height: 30px;
   width: 100vw;
-}/*# sourceMappingURL=main.css.map */
+}
+a {
+  margin-left: 15px;
+  color: #000;
+}
+
+
+
+
+/*# sourceMappingURL=main.css.map */

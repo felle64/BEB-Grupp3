@@ -3,7 +3,6 @@ body {
     margin: 0;
     overflow: hidden;
 }
-
 h1,
 h2 {
     margin-top: 0;
@@ -22,7 +21,7 @@ header {
         flex-grow: 1;
     }
 
-    background: #ffee00;
+    background-color: red;
     height: 30px;
     padding: 10px;
 }
@@ -75,7 +74,7 @@ header {
 }
 
 footer {
-    background-color: #aadd99;
+    background-color: red;
     position: absolute;
     bottom: 0;
     height: 30px;
