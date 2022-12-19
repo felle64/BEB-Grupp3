@@ -326,4 +326,75 @@
   to {
     transform: rotate(-359deg);
   }
+}
+body {
+  background-color: #676;
+  margin: 0;
+  overflow: hidden;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  background: #ffee00;
+  height: 30px;
+  padding: 10px;
+}
+header h1 {
+  margin: 0;
+}
+header div {
+  display: inline;
+  flex-grow: 1;
+}
+
+#headerDiv {
+  display: inline;
+  position: relative;
+}
+#headerDiv p {
+  display: inline;
+}
+#headerDiv button {
+  position: absolute;
+  right: 0px;
+}
+
+#contentDiv {
+  background-color: #e88290;
+  height: calc(100vh - 80px);
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+#contentDiv div {
+  flex-grow: 6;
+}
+#contentDiv div #rouletteDiv {
+  padding-left: calc(50% - 100px);
+}
+#contentDiv #blockHistory {
+  background-color: #aadd99;
+  flex-grow: 5;
+  height: 95%;
+}
+#contentDiv #blockHistory .listBlock {
+  display: block;
+  position: relative;
+  height: auto;
+  outline: 3px #FFFFFF solid;
+  margin: 0 10px;
+}
+
+footer {
+  background-color: #aadd99;
+  position: absolute;
+  bottom: 0;
+  height: 30px;
+  width: 100vw;
 }/*# sourceMappingURL=main.css.map */
