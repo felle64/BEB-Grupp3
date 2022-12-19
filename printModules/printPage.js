@@ -2,6 +2,8 @@ import pageUnknownContent from "./pageContent/pageLoggedOut/pageUnknown/modules/
 import createNewAccount from "../userModules/createNewUser/createNewAccountBtn.js";
 import logInSuccessContent from "./pageContent/pageLoggedIn/logInSuccessContent.js";
 import buildWheel from "./pageContent/pageLoggedIn/modules/wheel.js";
+import createNewUserText from "./pageContent/pageLoggedOut/createNewUserContent.js";
+
 
 // Main function to display content in the "contentDiv" based on what state the page is in
 export default function printPage(state) {
@@ -49,32 +51,20 @@ export default function printPage(state) {
         }
         case "createNewUser": {
             // console.log("Hi from CreateNewUser");
-            contentDiv.innerHTML = `
-        <h2>Create Account</h2>
-       
-        <form id="createNewUserForm">
-            <div class="inputField">
-                <label for="newUserName">Username:</label><br>
-                <input type="text" name="newUserName" id="newUserName" required/>
-            </div>
-            <br>
-            <div class="inputField">
-                <label for="newUserPassword">Password:</label><br>
-                <input type="password" name="newUserPassword" id="newUserPassword" required/>
-            </div>
-            <br>
-            <button type="submit" id="createNewAccountBtn">Create New Account</button>
-        </form>
-        <div id="errorBox">
-        <div id="errorBoxUsernameExists"></div>
-        <div id="errorBoxNewUsernameLength"></div> 
-        <div id="errorBoxNewPassword"></div> 
-        </div>
-              `;
+            createNewUserText();
+
+            
+
+            let closeCreateUserForm = document.getElementById("closeCreateUserForm");
+            closeCreateUserForm.addEventListener("click", ()=>{
+                state="unknown";
+                printPage(state);
+            });
+
             let createNewAccountBtn = document.getElementById("createNewAccountBtn");
-
-
             createNewAccountBtn.addEventListener("click", createNewAccount);
+            
+            
             break;
         }
         default: {
