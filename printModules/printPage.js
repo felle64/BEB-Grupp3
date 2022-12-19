@@ -4,6 +4,7 @@ import logInSuccessContent from "./pageContent/pageLoggedIn/logInSuccessContent.
 import buildWheel from "./pageContent/pageLoggedIn/modules/wheel.js";
 import createNewUserText from "./pageContent/pageLoggedOut/createNewUserContent.js";
 import betBtnEl from "./pageContent/pageLoggedIn/modules/betBtn.js";
+import failedText from "./pageContent/pageLoggedOut/pageUnknown/failedLoginText.js";
 
 
 
@@ -42,15 +43,7 @@ export default function printPage(state) {
         }
         case "failedLogInAttempt": {
             // console.log("Hi from failedLogInAttempt");
-            contentDiv.innerHTML = `
-        <div id="errorMessage">
-        <h2>Wrong Credentials</h2>
-        <p>Invalid username or password. <br>
-          Try again or create a new account.
-        </p>
-        <button id="iGiveUpGiveMeANewAccount">I give up, give me a new account</button>
-        </div>
-        `;
+            failedText();
             let iGiveUpGiveMeANewAccount = document.getElementById("iGiveUpGiveMeANewAccount");
             iGiveUpGiveMeANewAccount.addEventListener("click", () => {
                 state = "createNewUser";
