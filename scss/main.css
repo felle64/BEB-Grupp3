@@ -362,7 +362,8 @@ header div {
 }
 #headerDiv button {
   position: absolute;
-  right: 0px;
+  right: 10px;
+  top: 30px;
 }
 
 #contentDiv {
@@ -397,4 +398,27 @@ footer {
   bottom: 0;
   height: 30px;
   width: 100vw;
+}
+
+header {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#logoDiv {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer {
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  height: 30px;
+  width: 100vw;
+}
+
+a {
+  color: black;
+  margin-left: 15px;
 }/*# sourceMappingURL=main.css.map */

@@ -10,6 +10,7 @@ export default function printHeader(state) {
           <label for="userName">Username:</label><br>
           <input type="text" name="userName" id="userName" />
         </div>
+        <br>
         <div class="inputField">
           <label for="userPassword">Password:</label><br>
           <input type="password" name="userPassword" id="userPassword" />
