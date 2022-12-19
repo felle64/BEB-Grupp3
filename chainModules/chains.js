@@ -3,8 +3,8 @@ import validateChain from "./validateChain.js";
 import addBlock from "./addBlock.js";
 import block from "./block.js";
 
-export default class chains{
-    constructor(){
+export default class Chains {
+    constructor() {
         //localStorage check
         //add genesis block
         this.blockchain = [];
@@ -14,18 +14,18 @@ export default class chains{
     }
 
 
-    async validateChain(){
+    async validateChain() {
         validateChain();
     }
-    
-    async addBlock(blockData){
-        await addBlock(this, blockData);
-        
+
+    async addBlock(chain, blockData) {
+        await addBlock(chain, blockData);
+
         console.log("new block added?");
         console.log("blockchain", this.blockchain);
     }
 
-    async updateLocalStorage(){
+    async updateLocalStorage() {
         localStorage.setItem("blockchain", JSON.stringify(this))
     }
 }
