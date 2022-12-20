@@ -20,7 +20,7 @@ export default async function initBlockchain() {
         console.log('before mock', chain);
         await addHistory(chain, data);
         console.log('after mock', chain);
-        localStorage.setItem("chain", JSON.stringify(chain))
+        localStorage.setItem("chain", JSON.stringify(chain));
         //add to localStorage
     }
     else {

@@ -1,6 +1,7 @@
 export default function login(e) {
     e.preventDefault();
     users = JSON.parse(localStorage.getItem("users"));
+    console.log(users);
     let logInResultSuccess = users.find(user => user.username === userName.value && user.password === userPassword.value);
 
     if (logInResultSuccess) {

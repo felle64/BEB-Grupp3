@@ -7,12 +7,12 @@ export default function printBCLoggedIn() {
     // kolla bet true/false
     // If data.blockchain.outcome = true: Print WIN
     // else false = LOSE
-    chain['blockchain'][1]['data']['user']['bet']['win']
+    //chain['blockchain'][1]['data']['user']['bet']['win']
 
     // for-loop för att printa ut blockkedjan från LS
     let innerHTML = '';
-
-    for (let i = 0; i < chain['blockchain'].length; i++) {
+    console.log(chain);
+    for (let i = 0; i < chain.blockchain.length; i++) {
         console.log(chain, 'chain samarbetar, woho');
 
         // genesis
@@ -29,6 +29,7 @@ export default function printBCLoggedIn() {
             <p>Win: ${chain.blockchain[i].data.user.bet.win}</p>
             <p>Payout: ${chain.blockchain[i].data.user.bet.payout}</p>
             </div>`
+            //console.log('nytt block utskrivet');
         }
     }
     return innerHTML;
