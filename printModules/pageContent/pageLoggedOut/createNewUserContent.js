@@ -1,5 +1,5 @@
-export default function createNewUserText() {
-    let createNewUser= contentDiv.innerHTML = `
+export default function createNewUserContent() {
+    let createNewUser = `
 <h2>Create Account</h2>
 
 <form id="createNewUserForm">
