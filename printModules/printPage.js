@@ -1,13 +1,15 @@
-import pageUnknownContent from "./pageContent/pageLoggedOut/pageUnknown/modules/pageUnknown.js"
-import createNewAccount from "../userModules/createNewUser/createNewAccountBtn.js";
+import pageUnknownContent from "./pageContent/pageLoggedOut/pageUnknown/pageUnknownContent.js"
+//import createNewAccount from "../userModules/createNewUser/createNewAccountBtn.js";
 import logInSuccessContent from "./pageContent/pageLoggedIn/logInSuccessContent.js";
-import buildWheel from "./pageContent/pageLoggedIn/modules/wheel.js";
+//import buildWheel from "./pageContent/pageLoggedIn/modules/wheel.js";
 import createNewUserText from "./pageContent/pageLoggedOut/createNewUserContent.js";
-import betBtnEl from "./pageContent/pageLoggedIn/modules/betBtn.js";
-import failedText from "./pageContent/pageLoggedOut/pageUnknown/failedLoginText.js";
-
-
-
+//import betBtnEl from "./pageContent/pageLoggedIn/modules/betBtn.js";
+import failedLoginContent from "./pageContent/pageLoggedOut/pageUnknown/failedLoginContent.js";
+import failedLoginCode from "./pageContent/pageLoggedOut/pageUnknown/failedLoginCode.js";
+import pageUnknownCode from "./pageContent/pageLoggedOut/pageUnknown/pageUnknownCode.js";
+import loginSuccessCode from "./pageContent/pageLoggedIn/loginSuccessCode.js";
+import createNewUserCode from "./pageContent/pageLoggedOut/createNewUserCode.js";
+import createNewUserContent from "./pageContent/pageLoggedOut/createNewUserContent.js";
 
 // Main function to display content in the "contentDiv" based on what state the page is in
 export default function printPage(state) {
@@ -17,58 +19,26 @@ export default function printPage(state) {
         case "unknown": {
             // console.log("hi from unkown");
             contentDiv.innerHTML = pageUnknownContent();
-
-            let iWantToCreateAnAccountBtn = document.getElementById("iWantToCreateAnAccountBtn");
-            iWantToCreateAnAccountBtn.addEventListener("click", () => {
-                state = "createNewUser";
-                localStorage.setItem("state", state);
-                printPage(state);
-            });
+            pageUnknownCode();
             break;
         }
         case "logInSuccess": {
             // console.log("Hi from logInSuccess");
             console.log("logInSuccess");
             contentDiv.innerHTML = logInSuccessContent();
-            buildWheel();
-            let betBtn = document.getElementById("betBtn");
-            //let wagerInput = document.getElementById("wagerInput");
-            //let betInput = document.getElementById("betInput");
-            //let wagerInputValue = wagerInput.value;
-            //let betInputValue = betInput.value;
-            betBtn.addEventListener("click", betBtnEl);
-            //betBtnEl(wagerInput, betInput);
-           
+            loginSuccessCode();
             break;
         }
         case "failedLogInAttempt": {
             // console.log("Hi from failedLogInAttempt");
-            failedText();
-            let iGiveUpGiveMeANewAccount = document.getElementById("iGiveUpGiveMeANewAccount");
-            iGiveUpGiveMeANewAccount.addEventListener("click", () => {
-                state = "createNewUser";
-                localStorage.setItem("state", state);
-                printPage(state);
-                printHeader(state);
-            });
+            contentDiv.innerHTML = failedLoginContent();
+            failedLoginCode();
             break;
         }
         case "createNewUser": {
             // console.log("Hi from CreateNewUser");
-            createNewUserText();
-
-            
-
-            let closeCreateUserForm = document.getElementById("closeCreateUserForm");
-            closeCreateUserForm.addEventListener("click", ()=>{
-                state="unknown";
-                printPage(state);
-            });
-
-            let createNewAccountBtn = document.getElementById("createNewAccountBtn");
-            createNewAccountBtn.addEventListener("click", createNewAccount);
-            
-            
+            contentDiv.innerHTML = createNewUserContent();
+            createNewUserCode();
             break;
         }
         default: {
