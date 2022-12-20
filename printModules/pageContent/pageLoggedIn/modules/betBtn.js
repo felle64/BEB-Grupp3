@@ -11,7 +11,7 @@ export default async function betBtn() {
     let resultBetDiv = document.getElementById("resultBetDiv");
     let data = await getResult(wagerInput, betInput)
     console.log(data);
-    if (data.success === true) { if (data.bet.win === true) {
+if (data.success === true) { if (data.bet.win === true) { // lägg till lodräta sträck sen
      resultBetDiv.innerHTML = `<p>YOU WIN ${data.bet.payout - data.bet.wager} Lagom Token</p>`   
     }else{
         resultBetDiv.innerHTML = `<p>YOU LOSE</p>`
