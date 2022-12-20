@@ -5,5 +5,6 @@ export default class userClass{
         this.username = username;
         this.uuid = self.crypto.randomUUID();
         this.password = hashPassword(password, this);
+        this.balance = 100 //100 gratis tokens när kontot skapas
     }
 }
