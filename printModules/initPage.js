@@ -5,8 +5,6 @@
 import printPage from "./printPage.js";
 import printHeader from "./printHeader.js";
 
-
-
 export default function initPage() {
     let state = "unknown";
     if (!localStorage.getItem("state")) {

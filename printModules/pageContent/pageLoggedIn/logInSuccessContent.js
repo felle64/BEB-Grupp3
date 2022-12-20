@@ -1,5 +1,6 @@
 import buildWheel from "./modules/wheel.js";
 import printBettingForm from "./modules/printBettingForm.js";
+import printBCLoggedIn from "./modules/printBCLoggedIn.js";
 
 export default function logInSuccessContent() {
     let currentUser = localStorage.getItem("currentUser");
@@ -26,7 +27,7 @@ export default function logInSuccessContent() {
     innerHTML += '</div>';
     innerHTML += '<div id="blockHistory">'
 
-    //fake blockchain data
+/*     //fake blockchain data
     innerHTML += `<div class="listBlock">
     <p>2022-12-19 01:18</p>
     <p>User BEEP bet 2 tokens on red</p>
@@ -52,13 +53,13 @@ export default function logInSuccessContent() {
     <p>User MEEPO bet 2 tokens on red</p>
     <p>Outcome: WIN</p>
     </div>
-    `;
-
+    `; */
+    innerHTML += printBCLoggedIn();
     innerHTML += '</div>';
 
     
     //let betBtn = document.getElementById("betBtn");
     //betBtn.addEventListener("click", () => getResult());
-
+   
     return innerHTML;
 }
