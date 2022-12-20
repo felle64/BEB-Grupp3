@@ -13,10 +13,10 @@ let betInput = "red"
 // let data = await getResult(wagerInput, betInput)
 // console.log(data);
 
-
+initBlockchain();
 initUsers();
 initPage();
-initBlockchain();
+
 
 
 // console.log("block",block);
