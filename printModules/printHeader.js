@@ -1,10 +1,12 @@
 //Switch
+import validateChain from "../chainModules/validateChain.js";
 import printPage from "./printPage.js";
 
 export default function printHeader(state) {
     let currentUser = "";
     if (state !== "logInSuccess") {
-        headerDiv.innerHTML = `
+
+        headerDiv.innerHTML = `<div id="validationDiv"><div id="validationResultDiv"></div><button id="validationButton">Validate</button></div>
       <form id="logInForm">
         <div class="inputField">
           <label for="userName">Username:</label><br>
@@ -19,6 +21,7 @@ export default function printHeader(state) {
         <button type="submit" id="logInBtn">Log In</button>
       </form>
       `
+      validateChain();
         let logInBtn = document.getElementById("logInBtn");
         let userName = document.getElementById("userName");
         let userPassword = document.getElementById("userPassword");
@@ -45,10 +48,11 @@ export default function printHeader(state) {
 
     } else {
         currentUser = localStorage.getItem("currentUser");
-        headerDiv.innerHTML = `
+        headerDiv.innerHTML = `<div id="validationDiv"><div id="validationResultDiv"></div><button id="validationButton">Validate</button></div>
         <p>You are logged in as: ${currentUser}</p>
         <button id="logOutBtn">Log Out</button>
         `
+        validateChain();
         let logOutBtn = document.getElementById("logOutBtn");
         logOutBtn.addEventListener("click", () => {
 
