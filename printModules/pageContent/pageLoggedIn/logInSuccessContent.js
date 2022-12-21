@@ -5,13 +5,15 @@ import printBCLoggedIn from "./modules/printBCLoggedIn.js";
 export default function logInSuccessContent() {
     let currentUser = localStorage.getItem("currentUser");
     let innerHTML = ""
-    
-   
+
+
     innerHTML = `<div id="gameDiv">
     
                 <div id="rouletteDiv"></div>
                 ${printBettingForm()}
-                <div id="blockHistory"></div>
+                
+                </div>
+                <div id="blockHistory">
                 ${printBCLoggedIn()}
                 </div>`;
 
@@ -30,11 +32,11 @@ export default function logInSuccessContent() {
 
     // innerHTML += printBCLoggedIn();
     // innerHTML += '</div>';
-    
 
-    
+
+
     //let betBtn = document.getElementById("betBtn");
     //betBtn.addEventListener("click", () => getResult());
-   
+
     return innerHTML;
 }

@@ -2,8 +2,20 @@
 // @import "./pageLoggedIn/loggedIn";
 // @import "./pageLoggedIn/loggedOut";
 
+
+#rouletteDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameDiv {
+    display: flex;
+    flex-direction: column;
+}
+
 body {
-    background-color: #FAFAFA;
+    background-color: green;
     font-family: monospace;
     font-weight: bold;
     display: flex;
@@ -14,7 +26,7 @@ body {
 header {
     width: 100%;
     height: 200px;
-    background-color: #33B2B0;
+    background-color: red;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -28,7 +40,7 @@ h2 {
 footer {
     height: 100px;
     width: 100%;
-    background-color: #EB5757;
+    background-color: red;
     margin-top: 20px;
     display: flex;
     align-items: center;
@@ -36,7 +48,7 @@ footer {
 }
 
 button {
-    background-color: #EB5757;
+    background-color: gold;
     padding: 10px;
     font-weight: bold;
 }
@@ -55,9 +67,9 @@ q {
 
 #contentDiv {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     height: auto;
     padding-left: 30px;
     padding-right: 30px;
@@ -66,18 +78,28 @@ q {
 
 
 }
-    #blockHistory{
+
+#blockHistory {
+
+    // flex-grow: 5;
+    // height: 95%;
+    height: 50vh;
+    overflow-y: scroll;
+
+
+    .listBlock {
+        display: block;
+        position: relative;
+        height: auto;
+        outline: 3px #FFFFFF solid;
+        // margin: 0 10px;
         background-color: #aadd99;
-        flex-grow: 5;
-        height: 95%;
-        .listBlock{
-            display:block;
-            position:relative;
-            height:auto;
-            outline: 3px #FFFFFF solid;
-            margin: 0 10px;
-        }
+        padding: 1rem;
+        width: 100%;
+
     }
+}
+
 #headerDiv {
     width: 50%;
     display: flex;
