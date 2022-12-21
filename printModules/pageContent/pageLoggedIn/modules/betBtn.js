@@ -17,7 +17,7 @@ export default async function betBtn() {
     let currentUser = localStorage.getItem('currentUser');
     console.log(data);
     if (data.success === true) {
-        addBlock(formatBetData(data, currentUser))
+        await addBlock(formatBetData(data, currentUser))
         let chain = JSON.parse(localStorage.getItem('chain'))
         console.log('EFTER ADD BLOCK', chain);
         printPage("logInSuccess");
