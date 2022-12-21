@@ -6,7 +6,8 @@ export default class block {
         this.data = data;
         this.timeStamp = Date.now();
         this.prevHash = prevHash;
-        this.hash = calculateHash(this, prevHash);
+        //funkar inte att gör det här
+        //this.hash = calculateHash(this, prevHash);
         //nonce (if we need this, guess it's only useful for mining?)
     }
 }
