@@ -26,6 +26,6 @@ export default class Chains {
     }
 
     async updateLocalStorage() {
-        localStorage.setItem("blockchain", JSON.stringify(this))
+        localStorage.setItem("chain", JSON.stringify(this))
     }
 }

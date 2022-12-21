@@ -21,7 +21,7 @@ export default async function addBlock(blockData) {
 
 
     //Generate new hash value with calculateHash
-    //newBlock.hash = await calculateHash(newBlock);
+    newBlock.hash = await calculateHash(newBlock);
 
     //Add block to chain
     //chain.blockchain.push(newBlock);
