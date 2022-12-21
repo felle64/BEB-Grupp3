@@ -8,3 +8,4 @@ export default function initUsers() {
     };
     return users;
 }
+console.log(userClass);
