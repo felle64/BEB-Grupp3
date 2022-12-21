@@ -1,17 +1,20 @@
-#container{
+#container {
 	display: flex;
-    justify-content: center;
+	justify-content: center;
 	align-items: center;
 }
-.wheel{
+
+.wheel {
 	height: 312px;
 	width: 312px;
-	position: relative;
-	left: -75px;
+	//position: relative;
+	//left: -75px;
 	animation: wheelRotate 5s linear infinite;
+	margin-top: 40px;
+	// margin-bottom: 50px;
 }
 
-.block{
+.block {
 	transition: all 1s;
 	position: absolute;
 	width: 290px;
@@ -19,7 +22,8 @@
 	border-radius: 100%;
 	clip: rect(0px, 145px, 290px, 0px);
 }
-.sect{
+
+.sect {
 	position: absolute;
 	top: 10px;
 	left: 10px;
@@ -28,154 +32,231 @@
 	border-radius: 100%;
 	clip: rect(0px, 290px, 290px, 145px)
 }
-#sect1 .block{ 
+
+#sect1 .block {
 	background-color: #016D29;
 	transform: rotate(9.73deg);
 }
-#sect2 .block, #sect4 .block, #sect6 .block, #sect8 .block, #sect10 .block, #sect12 .block, #sect14 .block, #sect16 .block, #sect18 .block, #sect20 .block, #sect22 .block, #sect24 .block, #sect26 .block, #sect28 .block, #sect30 .block, #sect32 .block, #sect34 .block, #sect36 .block {
+
+#sect2 .block,
+#sect4 .block,
+#sect6 .block,
+#sect8 .block,
+#sect10 .block,
+#sect12 .block,
+#sect14 .block,
+#sect16 .block,
+#sect18 .block,
+#sect20 .block,
+#sect22 .block,
+#sect24 .block,
+#sect26 .block,
+#sect28 .block,
+#sect30 .block,
+#sect32 .block,
+#sect34 .block,
+#sect36 .block {
 	background-color: #E0080B;
 	transform: rotate(9.73deg);
 }
-#sect3 .block, #sect5 .block, #sect7 .block, #sect9 .block, #sect11 .block, #sect13 .block, #sect15 .block, #sect17 .block, #sect19 .block, #sect21 .block, #sect23 .block, #sect25 .block, #sect27 .block, #sect29 .block, #sect31 .block, #sect33 .block, #sect35 .block, #sect37 .block {
+
+#sect3 .block,
+#sect5 .block,
+#sect7 .block,
+#sect9 .block,
+#sect11 .block,
+#sect13 .block,
+#sect15 .block,
+#sect17 .block,
+#sect19 .block,
+#sect21 .block,
+#sect23 .block,
+#sect25 .block,
+#sect27 .block,
+#sect29 .block,
+#sect31 .block,
+#sect33 .block,
+#sect35 .block,
+#sect37 .block {
 	background-color: #000;
 	transform: rotate(9.73deg);
 }
+
 #sect2 {
 	transform: rotate(9.73deg);
-    
-	&0{ 
+
+	&0 {
 		transform: rotate(184.87deg);
-    }
-	&1{
+	}
+
+	&1 {
 		transform: rotate(194.6deg);
-    }
-	&2{
+	}
+
+	&2 {
 		transform: rotate(204.33deg);
 	}
-	&3{ 
+
+	&3 {
 		transform: rotate(214.06deg)
 	}
-	&4{ 
+
+	&4 {
 		transform: rotate(223.79deg)
 	}
-	&5{ 
+
+	&5 {
 		transform: rotate(233.52deg)
 	}
-	&6{ 
+
+	&6 {
 		transform: rotate(243.25deg)
 	}
-	&7{ 
+
+	&7 {
 		transform: rotate(252.98deg)
 	}
-	&8{ 
+
+	&8 {
 		transform: rotate(262.71deg)
-    }
-	&9{ 
+	}
+
+	&9 {
 		transform: rotate(272.44deg)
-	
-    }
+	}
 }
-#sect3{
+
+#sect3 {
 	transform: rotate(19.46deg);
+
 	&0 {
 		transform: rotate(282.17deg)
-    }
-	&1{
+	}
+
+	&1 {
 		transform: rotate(291.9deg)
 	}
-	&2{ 
+
+	&2 {
 		transform: rotate(301.63deg)
 	}
-	&3{ 
+
+	&3 {
 		transform: rotate(311.36deg)
 	}
-	&4{ 
+
+	&4 {
 		transform: rotate(321.09deg)
 	}
-	&5{ 
+
+	&5 {
 		transform: rotate(330.82deg)
 	}
-	&6{ 
+
+	&6 {
 		transform: rotate(340.55deg)
 	}
-	&7{ 
+
+	&7 {
 		transform: rotate(350.28deg)
 	}
 }
-#sect4{ 
+
+#sect4 {
 	transform: rotate(29.19deg)
 }
-#sect5{ 
+
+#sect5 {
 	transform: rotate(38.92deg)
 }
-#sect6{ 
+
+#sect6 {
 	transform: rotate(48.65deg)
 }
-#sect7{ 
+
+#sect7 {
 	transform: rotate(58.38deg)
 }
-#sect8{ 
+
+#sect8 {
 	transform: rotate(68.11deg)
 }
-#sect9{ 
+
+#sect9 {
 	transform: rotate(77.84deg)
 }
-#sect10{ 
+
+#sect10 {
 	transform: rotate(87.57deg)
 }
-#sect11{ 
+
+#sect11 {
 	transform: rotate(97.3deg)
 }
-#sect12{ 
+
+#sect12 {
 	transform: rotate(107.03deg)
 }
-#sect13{ 
+
+#sect13 {
 	transform: rotate(116.76deg)
 }
-#sect14{ 
+
+#sect14 {
 	transform: rotate(126.49deg)
 }
-#sect15{ 
+
+#sect15 {
 	transform: rotate(136.22deg)
 }
-#sect16{ 
+
+#sect16 {
 	transform: rotate(145.95deg)
 }
-#sect17{ 
+
+#sect17 {
 	transform: rotate(155.68deg)
 }
-#sect18{ 
+
+#sect18 {
 	transform: rotate(165.41deg)
 }
-#sect19{ 
+
+#sect19 {
 	transform: rotate(175.14deg)
 }
-.double, .single{ 
+
+.double,
+.single {
 	position: absolute;
 	z-index: 1;
 	color: #fff;
 	font-size: 14px;
 	transform: rotate(3deg);
 }
-.double{ 
+
+.double {
 	left: 148px;
 	margin-top: 4.5px;
 }
-.single{
+
+.single {
 	left: 152px;
 	margin-top: 4.5px;
 }
-.outerRim{ 
+
+.outerRim {
 	position: absolute;
 	left: 0;
 	top: 0;
 	width: 290px;
 	height: 290px;
 	border-radius: 100%;
-	box-shadow: 0px 0px 8px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 	border: 10px solid #F3c620;
 }
-.pocketsRim{ 
+
+.pocketsRim {
 	position: absolute;
 	top: 34px;
 	left: 34px;
@@ -184,7 +265,8 @@
 	border-radius: 100%;
 	border: 3px solid #c0c0c0;
 }
-.ballTrack{ 
+
+.ballTrack {
 	width: 212px;
 	height: 207px;
 	position: absolute;
@@ -194,7 +276,8 @@
 	z-index: 2;
 	animation: ballRotate 1s linear infinite;
 }
-.ball{ 
+
+.ball {
 	background-color: #fff;
 	width: 16px;
 	height: 16px;
@@ -203,7 +286,8 @@
 	left: 109px;
 	top: -8px;
 }
-.pockets{ 
+
+.pockets {
 	position: absolute;
 	top: 37px;
 	left: 37px;
@@ -213,7 +297,8 @@
 	border-radius: 100%;
 	opacity: .5;
 }
-.cone{ 
+
+.cone {
 	position: absolute;
 	top: 62px;
 	left: 61px;
@@ -223,9 +308,10 @@
 	border-radius: 100%;
 	background: radial-gradient(circle at 100px 100px, #892c10, #000);
 }
-.turret{ 
+
+.turret {
 	border-radius: 100%;
-	background: radial-gradient( circle at 30% 30%, #f3c620, #1a1608 );
+	background: radial-gradient(circle at 30% 30%, #f3c620, #1a1608);
 	width: 45px;
 	height: 45px;
 	position: absolute;
@@ -233,42 +319,51 @@
 	left: 134px;
 	z-index: 1;
 }
-.turretHandle{ 
-	background: radial-gradient( circle at 44%, #f3c620, #6a570f);
+
+.turretHandle {
+	background: radial-gradient(circle at 44%, #f3c620, #6a570f);
 	width: 87px;
 	height: 14px;
 	position: absolute;
 	left: 113px;
 	top: 148px;
 }
-.thendOne, .thendTwo{ 
+
+.thendOne,
+.thendTwo {
 	border-radius: 100%;
-	background: radial-gradient(circle at 30% 30%, #f3c620, #1a1608 );
+	background: radial-gradient(circle at 30% 30%, #f3c620, #1a1608);
 	width: 25px;
 	height: 25px;
 	position: absolute;
 }
-.thendOne{ 
+
+.thendOne {
 	top: -6px;
 	left: -20px;
 }
-.thendTwo{ 
+
+.thendTwo {
 	top: -6px;
 	left: 83px;
 }
-@keyframes wheelRotate{ 
-    from{	
-        transform: rotate(0deg);
-    }
-    to{ 
-	    transform: rotate(359deg);
-    }
+
+@keyframes wheelRotate {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(359deg);
+	}
 }
-@keyframes ballRotate{ 
-    from{	
-        transform: rotate(0deg);
-    }
-    to{ 
-	    transform: rotate(-359deg);
-    }
+
+@keyframes ballRotate {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(-359deg);
+	}
 }

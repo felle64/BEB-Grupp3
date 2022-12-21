@@ -7,10 +7,8 @@
 .wheel {
   height: 312px;
   width: 312px;
-  position: relative;
-  left: -75px;
-  -webkit-animation: wheelRotate 5s linear infinite;
-          animation: wheelRotate 5s linear infinite;
+  animation: wheelRotate 5s linear infinite;
+  margin-top: 40px;
 }
 
 .block {
@@ -37,12 +35,46 @@
   transform: rotate(9.73deg);
 }
 
-#sect2 .block, #sect4 .block, #sect6 .block, #sect8 .block, #sect10 .block, #sect12 .block, #sect14 .block, #sect16 .block, #sect18 .block, #sect20 .block, #sect22 .block, #sect24 .block, #sect26 .block, #sect28 .block, #sect30 .block, #sect32 .block, #sect34 .block, #sect36 .block {
+#sect2 .block,
+#sect4 .block,
+#sect6 .block,
+#sect8 .block,
+#sect10 .block,
+#sect12 .block,
+#sect14 .block,
+#sect16 .block,
+#sect18 .block,
+#sect20 .block,
+#sect22 .block,
+#sect24 .block,
+#sect26 .block,
+#sect28 .block,
+#sect30 .block,
+#sect32 .block,
+#sect34 .block,
+#sect36 .block {
   background-color: #E0080B;
   transform: rotate(9.73deg);
 }
 
-#sect3 .block, #sect5 .block, #sect7 .block, #sect9 .block, #sect11 .block, #sect13 .block, #sect15 .block, #sect17 .block, #sect19 .block, #sect21 .block, #sect23 .block, #sect25 .block, #sect27 .block, #sect29 .block, #sect31 .block, #sect33 .block, #sect35 .block, #sect37 .block {
+#sect3 .block,
+#sect5 .block,
+#sect7 .block,
+#sect9 .block,
+#sect11 .block,
+#sect13 .block,
+#sect15 .block,
+#sect17 .block,
+#sect19 .block,
+#sect21 .block,
+#sect23 .block,
+#sect25 .block,
+#sect27 .block,
+#sect29 .block,
+#sect31 .block,
+#sect33 .block,
+#sect35 .block,
+#sect37 .block {
   background-color: #000;
   transform: rotate(9.73deg);
 }
@@ -173,7 +205,8 @@
   transform: rotate(175.14deg);
 }
 
-.double, .single {
+.double,
+.single {
   position: absolute;
   z-index: 1;
   color: #fff;
@@ -220,8 +253,7 @@
   top: 50px;
   border-radius: 100%;
   z-index: 2;
-  -webkit-animation: ballRotate 1s linear infinite;
-          animation: ballRotate 1s linear infinite;
+  animation: ballRotate 1s linear infinite;
 }
 
 .ball {
@@ -276,7 +308,8 @@
   top: 148px;
 }
 
-.thendOne, .thendTwo {
+.thendOne,
+.thendTwo {
   border-radius: 100%;
   background: radial-gradient(circle at 30% 30%, #f3c620, #1a1608);
   width: 25px;
@@ -294,29 +327,12 @@
   left: 83px;
 }
 
-@-webkit-keyframes wheelRotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-
 @keyframes wheelRotate {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(359deg);
-  }
-}
-@-webkit-keyframes ballRotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-359deg);
   }
 }
 @keyframes ballRotate {
@@ -327,8 +343,19 @@
     transform: rotate(-359deg);
   }
 }
+#rouletteDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gameDiv {
+  display: flex;
+  flex-direction: column;
+}
+
 body {
-  background-color: #FAFAFA;
+  background-color: green;
   font-family: monospace;
   font-weight: bold;
   display: flex;
@@ -339,7 +366,7 @@ body {
 header {
   width: 100%;
   height: 200px;
-  background-color: #33B2B0;
+  background-color: red;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -353,7 +380,7 @@ h2 {
 footer {
   height: 100px;
   width: 100%;
-  background-color: #EB5757;
+  background-color: red;
   margin-top: 20px;
   display: flex;
   align-items: center;
@@ -361,7 +388,7 @@ footer {
 }
 
 button {
-  background-color: #EB5757;
+  background-color: gold;
   padding: 10px;
   font-weight: bold;
 }
@@ -379,9 +406,9 @@ q {
 
 #contentDiv {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   height: auto;
   padding-left: 30px;
   padding-right: 30px;
@@ -390,16 +417,17 @@ q {
 }
 
 #blockHistory {
-  background-color: #aadd99;
-  flex-grow: 5;
-  height: 95%;
+  height: 50vh;
+  overflow-y: scroll;
 }
 #blockHistory .listBlock {
   display: block;
   position: relative;
   height: auto;
   outline: 3px #FFFFFF solid;
-  margin: 0 10px;
+  background-color: #aadd99;
+  padding: 1rem;
+  width: 100%;
 }
 
 #headerDiv {
@@ -547,8 +575,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
