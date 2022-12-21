@@ -4,7 +4,14 @@ export default class userClass {
     constructor(username, password) {
         this.username = username;
         this.uuid = self.crypto.randomUUID();
-        this.password = password //hashPassword(password, this);
+        this.password = password//hashPassword(password, this)
+            //.then( err => console.log(err));
         this.balance = 100 //100 gratis tokens när kontot skapas
+        
+     
     }
+    
 }
+
+console.log(hashPassword("test","janne")  
+.then(hash => console.log("hash test",hash)));
