@@ -5,6 +5,7 @@ import initPage from "./printModules/initPage.js";
 import initUsers from "./userModules/initUsers.js";
 import initBlockchain from "./chainModules/initBlockchain.js";
 // import getResult from "./bettingModules/api.js";
+import validateChain from "./chainModules/validateChain.js";
 
 let wagerInput = 1
 let betInput = "red"
@@ -16,6 +17,7 @@ let betInput = "red"
 initBlockchain();
 initUsers();
 initPage();
+validateChain();
 
 
 

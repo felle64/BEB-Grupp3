@@ -1,5 +1,4 @@
 
-
 export default function formatBetData(data, currentUser) {
 
     console.log('formatbetdata', data);
