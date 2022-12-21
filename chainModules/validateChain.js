@@ -1,10 +1,47 @@
 //Takes blockchain variable, or name of localStorage variable for the blockchain
 
+import block from "./block.js";
+import calculateHash from "./calculateHash.js";
+
 export default async function validateChain(){
     console.log("validerar");
     
        
  //Fetches current chain from localStorage
+ let chain = JSON.parse(localStorage.getItem('chain'));
+    for (let i = 0;  i < chain.blockchain.length; i++) {
+        console.log(chain.blockchain[i]);
+        if(calculateHash(chain.blockchain[i]) === chain.blockchain[i].hash) {
+            console.log('valid', chain.blockchain[i].hash);
+            // return
+        } else {
+            console.log('invalid', chain.blockchain[i].hash);
+            // return
+        }
+    }
+    // REFERENS ----------------------------------------------------------------------
+/*     let innerHTML = '';
+    console.log(chain);
+    for (let i = chain.blockchain.length - 1; i >= 0; i--) {
+        console.log(chain, 'chain samarbetar, woho');
+
+        // genesis
+        if (chain['blockchain'][i]['data'] == 'genesis') {
+            console.log('works!', chain['blockchain'][i]['data'])
+        }
+        else {
+            let myDate = new Date(chain.blockchain[i].timeStamp)
+            let dateStr = myDate.getFullYear() + "/" + (myDate.getMonth() + 1) + "/" + myDate.getDate() +
+             " " + myDate.getHours() + ":" + myDate.getMinutes() + ":" + myDate.getSeconds();
+
+            const divs = document.querySelectorAll('div.listBlock');
+            innerHTML += `<div class="listBlock">
+            <p>Timestamp: ${dateStr}</p>
+            <p>${chain.blockchain[i].data.user.username} bet ${chain.blockchain[i].data.user.bet.wager} 
+            tokens on ${chain.blockchain[i].data.user.bet.bet}</p> */
+
+// --------------------------------------------------------------------------
+
     //For block in chain
         //check if calculateHash(block) == block.hash
             //if not
@@ -12,6 +49,7 @@ export default async function validateChain(){
                 //break
     //If all checked, and no issue
         //return valid
+
         //-------------------JANNES KOD--------------------------------------------------------------------------------
         //     let testHash = currentBlock.calculateHash().then(hash => {
         //         console.log("testHash", hash);

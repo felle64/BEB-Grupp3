@@ -9,7 +9,6 @@ export default function printBCLoggedIn() {
     //chain['blockchain'][1]['data']['user']['bet']['win']
 
     // for-loop för att printa ut blockkedjan från LS
-    // LÖS: Vi vill printa ut i motsatt ordning
     let innerHTML = '';
     console.log(chain);
     for (let i = chain.blockchain.length - 1; i >= 0; i--) {
@@ -31,7 +30,7 @@ export default function printBCLoggedIn() {
             <p>Payout: ${chain.blockchain[i].data.user.bet.payout}</p>
             </div>`
             console.log(chain.blockchain[i]);
-            //console.log('nytt block utskrivet');
+            console.log('nytt block utskrivet');
         }
     }
     return innerHTML;

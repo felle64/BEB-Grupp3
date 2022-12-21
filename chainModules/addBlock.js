@@ -1,12 +1,11 @@
 import block from "./block.js";
 import calculateHash from "./calculateHash.js";
+import validateChain from "./validateChain.js";
 
 //Takes bet and user information
 export default async function addBlock(blockData) {
     //console.log("last block test",chain.blockchain[chain.blockchain.length-1]);
-    //Put bet and user information into JSON?
-    //Also encryp the user data
-    //let data = {} //
+    //Also encrypt the user data
 
     //Fetches current chain from localStorage
     //Not done
@@ -31,4 +30,5 @@ export default async function addBlock(blockData) {
     //Update localStorage value
     localStorage.setItem("chain", JSON.stringify(chain));
 
+// validateChain();
 }
