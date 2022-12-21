@@ -79,6 +79,19 @@ q {
 
 }
 
+// #loggedOutContent {
+//     display: flex;
+//     flex-direction: column;
+
+// }
+
+#pageUnknownWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+
 #blockHistory {
 
     // flex-grow: 5;
