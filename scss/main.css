@@ -416,6 +416,12 @@ q {
   margin-bottom: auto;
 }
 
+#pageUnknownWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
 #blockHistory {
   height: 50vh;
   overflow-y: scroll;

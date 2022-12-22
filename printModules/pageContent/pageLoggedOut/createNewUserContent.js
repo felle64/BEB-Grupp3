@@ -1,5 +1,6 @@
 export default function createNewUserContent() {
     let createNewUser = `
+    <div id="createAccountWrapper">
 <h2>Create Account</h2>
 
 <form id="createNewUserForm">
@@ -22,6 +23,7 @@ export default function createNewUserContent() {
 <div id="errorBoxNewUsernameLength"></div> 
 <div id="errorBoxNewPassword"></div> 
 </div>
+</div>
       `;
-      return createNewUser
+    return createNewUser
 }
