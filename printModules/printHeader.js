@@ -8,7 +8,7 @@ export default function printHeader(state) {
   if (state !== "logInSuccess") {
 
     headerDiv.innerHTML = `<div id="validationDiv"><div id="validationResultDiv"></div><button id="validationButton">Validate</button></div>
-      <div id="logInForm">
+      <form id="logInForm">
         <div class="inputField">
           <label for="userName">Username:</label><br>
           <input type="text" name="userName" id="userName" />
@@ -20,13 +20,14 @@ export default function printHeader(state) {
         </div>
         <br>
         <button type="submit" id="logInBtn">Log In</button>
-      </div>
+      </form>
       `
     validateChain();
 
     let logInBtn = document.getElementById("logInBtn");
 
     logInBtn.addEventListener("click", (e) => {
+      e.preventDefault();
       loginBtn(e);
     });
 
