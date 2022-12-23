@@ -3,6 +3,7 @@ import addBlock from "../../../../chainModules/addBlock.js";
 import formatBetData from "./formatBetData.js";
 import printBCLoggedIn from "./printBCLoggedIn.js";
 import printPage from "../../../printPage.js";
+import getUserObjectFromUserUUID from "../../../../userModules/getUserObjectFromUserUUID.js";
 //Få den att print till sidan från api.js
 //Få den att göra det genom en funktion
 
@@ -15,10 +16,10 @@ export default async function betBtn() {
     console.log(betInput);
     let resultBetDiv = document.getElementById("resultBetDiv");
     let data = await getResult(wagerInput, betInput)
-    let currentUser = localStorage.getItem('currentUser');
+    let currentUser = getUserObjectFromUserUUID();
     console.log(data);
     if (data.success === true) {
-        await addBlock(formatBetData(data, currentUser))
+        await addBlock(formatBetData(data, currentUser.username))
         let chain = JSON.parse(localStorage.getItem('chain'))
         console.log('EFTER ADD BLOCK', chain);
         if (data.bet.win === true) { // lägg till lodräta sträck sen

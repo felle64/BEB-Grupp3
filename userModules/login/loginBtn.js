@@ -34,7 +34,7 @@ export default async function loginBtn(e) {
     if (logInResultSuccess) {
         let state = "logInSuccess";
         localStorage.setItem("state", state);
-        let currentUser = userName;
+        let currentUser = foundUser.uuid;
         localStorage.setItem("currentUser", currentUser);
         printPage(state);
         printHeader(state);
