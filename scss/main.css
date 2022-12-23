@@ -343,10 +343,6 @@
     transform: rotate(-359deg);
   }
 }
-* {
-  box-sizing: border-box;
-}
-
 #rouletteDiv {
   display: flex;
   justify-content: center;
@@ -431,6 +427,7 @@ q {
   overflow-y: scroll;
 }
 #blockHistory .listBlock {
+  box-sizing: border-box;
   display: block;
   position: relative;
   height: auto;
