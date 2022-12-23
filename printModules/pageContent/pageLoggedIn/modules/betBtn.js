@@ -15,32 +15,39 @@ export default async function betBtn() {
     let wagerInput = document.getElementById("wagerInput").value;
     let betInput = document.getElementById("betInput").value;
     let blockHistory = document.getElementById("blockHistory")
-    console.log(wagerInput);
-    console.log(betInput);
+    //console.log(wagerInput);
+    //console.log(betInput);
     let resultBetDiv = document.getElementById("resultBetDiv");
-    let data = await getResult(wagerInput, betInput)
     let currentUser = getUserObjectFromUserUUID();
-    console.log(data);
-    if (data.success === true) {
-        await addBlock(formatBetData(data, currentUser.username))
-        let chain = JSON.parse(localStorage.getItem('chain'))
-        console.log('EFTER ADD BLOCK', chain);
-        if (data.bet.win === true) { // lägg till lodräta sträck sen
-            resultBetDiv.innerHTML = `<p>YOU WIN ${data.bet.payout - data.bet.wager} Lagom Token</p>`
-            currentUser.updateBalance(data.bet.payout - data.bet.wager)
-            updateUsers(currentUser)
-            printHeader("logInSuccess")
-        } else {
-            resultBetDiv.innerHTML = `<p>YOU LOSE</p>`
-            console.log("currentUser",currentUser instanceof userClass); 
-            currentUser.updateBalance(-data.bet.wager)
-            //function för updateUsers
-             updateUsers(currentUser)
-             printHeader("logInSuccess")
-             console.log(currentUser.balance);
-        }
-    } else { console.log("fail") }
-    blockHistory.innerHTML = printBCLoggedIn();
+    //console.log(currentUser.balance);
+    if (wagerInput <= currentUser.balance) {
+        let data = await getResult(wagerInput, betInput);
+        console.log(data);
+        if (data.success === true) {
+            await addBlock(formatBetData(data, currentUser.username))
+            let chain = JSON.parse(localStorage.getItem('chain'))
+            console.log('EFTER ADD BLOCK', chain);
+            if (data.bet.win === true) { // lägg till lodräta sträck sen
+                resultBetDiv.innerHTML = `<p>YOU WIN ${data.bet.payout - data.bet.wager} Lagom Token</p>`
+                currentUser.updateBalance(data.bet.payout - data.bet.wager)
+                updateUsers(currentUser)
+                printHeader("logInSuccess")
+            } else {
+                resultBetDiv.innerHTML = `<p>YOU LOSE</p>`
+                console.log("currentUser", currentUser instanceof userClass);
+                currentUser.updateBalance(-data.bet.wager)
+                //function för updateUsers
+                updateUsers(currentUser)
+                printHeader("logInSuccess")
+                console.log(currentUser.balance);
+            }
+        } else { console.log("fail") }
+        blockHistory.innerHTML = printBCLoggedIn();
+    }
+    else {
+        //console.log("not enough money", wagerInput, currentUser.balance);
+        resultBetDiv.innerHTML = `<p>You don't have enough tokens to bet ${wagerInput}</p>`;
+    }
 }
 
 
