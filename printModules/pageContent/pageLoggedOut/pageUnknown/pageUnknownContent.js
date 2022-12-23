@@ -1,3 +1,5 @@
+import printBCLoggedOut from "./modules/printBCLoggedOut.js";
+
 export default function pageUnknownContent() {
   let pageUnknownContent = `
   <div id="pageUnknownWrapper">
@@ -8,6 +10,10 @@ export default function pageUnknownContent() {
     <br>
     <button id="iWantToCreateAnAccountBtn">I want to create an account</button>
     </div>
-    `
+
+    <div id="blockHistory">
+    ${printBCLoggedOut()}
+    </div>`;
+    
   return pageUnknownContent;
-}
+};
