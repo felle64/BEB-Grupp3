@@ -1,13 +1,10 @@
 body {
-    background-color: #676;
     margin: 0;
     overflow: hidden;
 }
-h1,
-h2 {
+h1, h2 {
     margin-top: 0;
 }
-
 header {
     h1 {
         margin: 0;
@@ -45,7 +42,6 @@ header {
     background-color: green;
     height: calc(100vh - 80px); //30px header + 30px footer + 10px*2 padding
     padding: 10px;
-
     display: flex;
     flex-direction: row;
 
@@ -57,8 +53,6 @@ header {
             padding-left: calc(50% - 100px);
 
         }
-
-
     }
     #blockHistory{
         background-color: #aadd99;
@@ -73,10 +67,10 @@ header {
         }
     }
 }
-footer {
-    background-color: red;
+/* footer {
+ //   background-color: red;
     position: absolute;
     bottom: 0;
     height: 30px;
     width: 100vw;
-}
+} */
