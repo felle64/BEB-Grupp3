@@ -6,6 +6,7 @@ import printPage from "../../../printPage.js";
 import getUserObjectFromUserUUID from "../../../../userModules/getUserObjectFromUserUUID.js";
 import printHeader from "../../../printHeader.js";
 import userClass from "../../../../userModules/userClass.js";
+import updateUsers from "../../../../userModules/updateUser.js";
 //Få den att print till sidan från api.js
 //Få den att göra det genom en funktion
 
@@ -26,21 +27,14 @@ export default async function betBtn() {
         console.log('EFTER ADD BLOCK', chain);
         if (data.bet.win === true) { // lägg till lodräta sträck sen
             resultBetDiv.innerHTML = `<p>YOU WIN ${data.bet.payout - data.bet.wager} Lagom Token</p>`
+            currentUser.updateBalance(data.bet.payout - data.bet.wager)
+            updateUsers(currentUser)
+            printHeader("logInSuccess")
         } else {
             resultBetDiv.innerHTML = `<p>YOU LOSE</p>`
             console.log("currentUser",currentUser instanceof userClass); 
             currentUser.updateBalance(-data.bet.wager)
             //function för updateUsers
-            function updateUsers (userUpdate){
-                let users = JSON.parse(localStorage.getItem('users'))
-                let foundUser = users.find(user => {
-                    return user.uuid === currentUser.uuid;
-                })
-                let i = users.indexOf(foundUser);
-                console.log(currentUser);
-                users[i]=currentUser
-                localStorage.setItem('users', JSON.stringify(users))
-            }
              updateUsers(currentUser)
              printHeader("logInSuccess")
              console.log(currentUser.balance);
