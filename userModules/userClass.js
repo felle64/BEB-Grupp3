@@ -8,6 +8,10 @@ export default class userClass {
         //.then( err => console.log(err));
         this.balance = 100 //100 gratis tokens när kontot skapas
     }
+    updateBalance(v) {
+        this.balance += v
+        
+    }
 }
 
 // console.log(hashPassword("test","janne")
