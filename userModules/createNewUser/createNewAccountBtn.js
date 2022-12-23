@@ -2,6 +2,7 @@ import checkIfUsernameIsAvailable from './newUserRequirements/checkIfUsernameIsA
 import checkPasswordStrength from './newUserRequirements/checkPasswordStrength.js'
 import newUserNameLengthCheck from './newUserRequirements/newUsernameLengthCheck.js'
 import printPage from '../../printModules/printPage.js';
+import addUser from './addUser.js';
 
 export default function createNewAccount(e) {
     e.preventDefault();
@@ -11,14 +12,7 @@ export default function createNewAccount(e) {
 
     //If username and password input match conditions to create new user, push new user to LocalStorage
     if (checkIfUsernameIsAvailable(newUserName.value) && newUserNameLengthCheck(newUserName.value) && checkPasswordStrength(newUserPassword.value)) {
-
-        let newUser = {
-            username: newUserName.value,
-            password: newUserPassword.value
-        }
-        let users = JSON.parse(localStorage.getItem("users"));
-        users.push(newUser);
-        localStorage.setItem("users", JSON.stringify(users));
+        addUser(newUserName.value, newUserPassword.value)
 
         // Go back to "start page"
         let state = "unknown";
