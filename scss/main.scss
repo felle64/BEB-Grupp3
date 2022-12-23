@@ -2,6 +2,9 @@
 // @import "./pageLoggedIn/loggedIn";
 // @import "./pageLoggedIn/loggedOut";
 
+* {
+    box-sizing: border-box;
+}
 
 #rouletteDiv {
     display: flex;

@@ -343,6 +343,10 @@
     transform: rotate(-359deg);
   }
 }
+* {
+  box-sizing: border-box;
+}
+
 #rouletteDiv {
   display: flex;
   justify-content: center;
