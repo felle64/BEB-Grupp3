@@ -22,7 +22,7 @@ export default function printBCLoggedIn() {
             let myDate = new Date(chain.blockchain[i].timeStamp)
             let dateStr = myDate.getFullYear() + "/" + (myDate.getMonth() + 1) + "/" + myDate.getDate() + " " + myDate.getHours() + ":" + myDate.getMinutes() + ":" + myDate.getSeconds();
 
-            const divs = document.querySelectorAll('div.listBlock');
+            //const divs = document.querySelectorAll('div.listBlock');
             innerHTML += `<div class="listBlock">
             <p>Timestamp: ${dateStr}</p>
             <p>${chain.blockchain[i].data.user.username} bet ${chain.blockchain[i].data.user.bet.wager} tokens on ${chain.blockchain[i].data.user.bet.bet}</p>

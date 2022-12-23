@@ -15,11 +15,11 @@ let betInput = "red"
 // let data = await getResult(wagerInput, betInput)
 // console.log(data);
 
-initBlockchain();
-initUsers();
-initPage();
-validateChain();
-printBCLoggedOut();
+await initBlockchain();
+await initUsers();
+await initPage();
+await validateChain();
+//printBCLoggedOut();
 
 
 
