@@ -4,6 +4,8 @@ import formatBetData from "./formatBetData.js";
 import printBCLoggedIn from "./printBCLoggedIn.js";
 import printPage from "../../../printPage.js";
 import getUserObjectFromUserUUID from "../../../../userModules/getUserObjectFromUserUUID.js";
+import printHeader from "../../../printHeader.js";
+import userClass from "../../../../userModules/userClass.js";
 //Få den att print till sidan från api.js
 //Få den att göra det genom en funktion
 
@@ -26,6 +28,22 @@ export default async function betBtn() {
             resultBetDiv.innerHTML = `<p>YOU WIN ${data.bet.payout - data.bet.wager} Lagom Token</p>`
         } else {
             resultBetDiv.innerHTML = `<p>YOU LOSE</p>`
+            console.log("currentUser",currentUser instanceof userClass); 
+            currentUser.updateBalance(-data.bet.wager)
+            //function för updateUsers
+            function updateUsers (userUpdate){
+                let users = JSON.parse(localStorage.getItem('users'))
+                let foundUser = users.find(user => {
+                    return user.uuid === currentUser.uuid;
+                })
+                let i = users.indexOf(foundUser);
+                console.log(currentUser);
+                users[i]=currentUser
+                localStorage.setItem('users', JSON.stringify(users))
+            }
+             updateUsers(currentUser)
+             printHeader("logInSuccess")
+             console.log(currentUser.balance);
         }
     } else { console.log("fail") }
     blockHistory.innerHTML = printBCLoggedIn();
