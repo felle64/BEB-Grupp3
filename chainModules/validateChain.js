@@ -15,7 +15,8 @@ export default async function validateChain(){
             validationResultDiv.innerHTML = `valid ✔️`;
             // return
         } else {
-            //console.log('invalid', chain.blockchain[i].hash);
+            console.log('invalid', chain.blockchain[i].hash);
+            validationResultDiv.innerHTML = `invalid ❌`;
             //console.log(calculateHash(chain.blockchain[i])); // ger promise
             // return
         }
