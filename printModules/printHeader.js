@@ -6,6 +6,7 @@ import getUserObjectFromUserUUID from "../userModules/getUserObjectFromUserUUID.
 
 export default function printHeader(state) {
 
+
   if (state !== "logInSuccess") {
 
     headerDiv.innerHTML = `<div id="validationDiv"><div id="validationResultDiv"></div><button id="validationButton">Validate</button></div>
@@ -23,7 +24,13 @@ export default function printHeader(state) {
         <button type="submit" id="logInBtn">Log In</button>
       </form>
       `
-    validateChain();
+      validateChain()
+
+    let validationButton = document.getElementById("validationButton");
+      validationButton.addEventListener("click", () => {
+        console.log("validate");
+        validateChain();
+      });
 
     let logInBtn = document.getElementById("logInBtn");
 
@@ -42,7 +49,14 @@ export default function printHeader(state) {
         <p>Account Balance: ${foundUser.balance}</p>
         <button id="logOutBtn">Log Out</button>
         `
-    validateChain();
+        validateChain()
+
+        validationButton.addEventListener("click", () => {
+          console.log("validate");
+          validateChain();
+        });
+
+
     let logOutBtn = document.getElementById("logOutBtn");
     logOutBtn.addEventListener("click", () => {
 
