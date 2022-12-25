@@ -33,8 +33,6 @@ export default function logInSuccessContent() {
     // innerHTML += printBCLoggedIn();
     // innerHTML += '</div>';
 
-
-
     //let betBtn = document.getElementById("betBtn");
     //betBtn.addEventListener("click", () => getResult());
 

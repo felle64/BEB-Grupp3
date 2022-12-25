@@ -7,7 +7,8 @@ export default function printBettingForm() {
         <input type="number" id="wagerInput" placeholder="You Wager">
         <input type="text" id="betInput" placeholder="What you want to bet on">
         <button id="betBtn">Bet</button>
-    </div> 
-    <div id="resultBetDiv"></div>`;
+        <div id="resultBetDiv"></div>
+    </div>
+    `;
     return innerHTML;
 }

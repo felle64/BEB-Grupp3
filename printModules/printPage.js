@@ -11,7 +11,7 @@ import loginSuccessCode from "./pageContent/pageLoggedIn/loginSuccessCode.js";
 import createNewUserCode from "./pageContent/pageLoggedOut/createNewUserCode.js";
 import createNewUserContent from "./pageContent/pageLoggedOut/createNewUserContent.js";
 
-// Main function to display content in the "contentDiv" based on what state the page is in
+// Main function to display content in the "contentDiv" 
 export default function printPage(state) {
     let currentUser = "";
     let contentDiv = document.getElementById('contentDiv');

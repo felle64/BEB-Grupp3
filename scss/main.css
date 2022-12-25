@@ -370,11 +370,12 @@
 
 #gameDiv {
   display: flex;
-  flex-direction: column;
 }
 
 body {
   background-color: rgb(15, 116, 15);
+  background-image: url(../img/greenRouletteBackground.jpg);
+  background-size: cover;
   font-family: monospace;
   font-weight: bold;
   display: flex;
@@ -382,12 +383,13 @@ body {
   min-height: 100vh;
   margin: 0;
   overflow: hidden;
+  color: white;
 }
 
 header {
   width: 100%;
-  height: 200px;
-  background-color: rgb(187, 2, 2);
+  height: 120px;
+  background-color: rgb(100, 0, 0);
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -400,14 +402,18 @@ h2 {
 }
 
 footer {
-  height: 100px;
+  height: 50px;
   width: 100%;
-  background-color: rgb(187, 2, 2);
+  background-color: rgb(100, 0, 0);
   margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 2px solid black;
+}
+
+a {
+  color: rgb(86, 255, 114);
 }
 
 button {
@@ -454,7 +460,7 @@ q {
   position: relative;
   height: auto;
   outline: 3px #FFFFFF solid;
-  background-color: #aadd99;
+  background-color: rgb(1, 37, 0);
   padding: 1rem;
   width: 100%;
 }
