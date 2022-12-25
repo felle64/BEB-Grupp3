@@ -1,4 +1,3 @@
-
 export default class userClass {
     constructor(username) {
         this.username = username;

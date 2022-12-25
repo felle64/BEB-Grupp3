@@ -11,18 +11,18 @@ export default function printHeader(state) {
 
     headerDiv.innerHTML = `<div id="validationDiv"><div id="validationResultDiv"></div><button id="validationButton">Validate</button></div>
       <form id="logInForm">
-        <div class="inputField">
-          <label for="userName">Username:</label><br>
+        <span class="inputField">
+          <label for="userName">Username:</label>
           <input type="text" name="userName" id="userName" />
-        </div>
-        <br>
-        <div class="inputField">
-          <label for="userPassword">Password:</label><br>
+        </span>
+        <br><br>
+        <span class="inputField">
+          <label for="userPassword">Password:</label>
           <input type="password" name="userPassword" id="userPassword" />
-        </div>
-        <br>
-        <button type="submit" id="logInBtn">Log In</button>
+        </span>
+        
       </form>
+      <button type="submit" id="logInBtn">Log In</button>
       `
       validateChain()
 
