@@ -5,13 +5,13 @@
   justify-content: center;
   align-items: center;
   height: 312px;
-  margin-top: 40px;
+  align-self: center;
 }
 
 #gameDiv {
   display: flex;
   margin: 0;
-  height: 400px;
+  height: calc(100vh - 220px);
   gap: 50px;
   justify-content: center;
   margin-left: auto;
@@ -362,12 +362,21 @@
     transform: rotate(-359deg);
   }
 }
+#bettingForm {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .bettingButtons {
-  padding: 10px calc(50% - 80px);
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 .bettingButtons .bettingButton {
   width: 67px;
-  margin: 0 auto;
 }
 .bettingButtons .clicked {
   border: solid white 2px;
@@ -381,6 +390,37 @@
 .bettingButtons #btnBlack {
   background-color: black;
   color: white;
+}
+
+#betBtn {
+  width: 100px;
+}
+
+#btnLow,
+#btnOdd,
+#btnRed,
+#btnGreen {
+  margin-left: auto;
+}
+
+#btnHigh,
+#btnEven,
+#btnBlack,
+#btnNumber {
+  margin-right: auto;
+}
+
+#betInput {
+  float: right;
+  width: 43px;
+}
+
+#wagerInput {
+  width: 65px;
+}
+
+#betInputLabel {
+  width: 50px;
 }
 
 .blink {
@@ -486,23 +526,19 @@ q {
   margin-right: auto;
 }
 
-#bettingForm {
-  position: relative;
-}
-
-#betBtn {
-  position: absolute;
-  left: 50%;
-}
-
 #createAccountWrapper {
+  width: 350px;
   margin-left: auto;
   margin-right: auto;
+  padding: 1rem;
+  background-color: rgba(32, 51, 66, 0.5725490196);
 }
 
 #errorMessage {
   margin-left: auto;
   margin-right: auto;
+  padding: 1rem;
+  background-color: rgba(32, 51, 66, 0.5725490196);
 }
 
 #blockHistory {

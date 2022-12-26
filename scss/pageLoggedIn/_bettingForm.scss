@@ -1,17 +1,35 @@
+#bettingForm {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    // justify-content: center;
+    // background-color: blue;
+    // position: relative;
+}
+
+
 .bettingButtons {
+
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
     .bettingButton {
         width: 67px;
-        margin: 0 auto;
+        //margin: 0 auto;
     }
 
-    .clicked{
+    .clicked {
         border: solid white 2px;
     }
 
-    padding:10px calc(50% - 80px);
+    // padding:10px calc(50% - 80px);
 
     #btnGreen {
         background-color: green;
+
     }
 
     #btnRed {
@@ -22,4 +40,52 @@
         background-color: black;
         color: white;
     }
+
+
+}
+
+#betBtn {
+    width: 100px;
+}
+
+
+#btnLow,
+#btnOdd,
+#btnRed,
+#btnGreen {
+    margin-left: auto;
+}
+
+#btnHigh,
+#btnEven,
+#btnBlack,
+#btnNumber {
+    margin-right: auto;
+}
+
+
+
+
+#betInput {
+    // position: absolute;
+    // left: 50%;
+    // width: 100px;
+    float: right;
+    width: 43px;
+}
+
+#wagerInput {
+    width: 65px
+}
+
+#betInputLabel {
+    // display: block;
+    // text-align: center;
+    width: 50px;
+    // height: 100px;
+    // line-height: 150%;
+    // font-size: .85em;
+    // margin-top: auto;
+    // margin-bottom: auto;
+
 }

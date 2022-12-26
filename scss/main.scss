@@ -113,27 +113,19 @@ q {
     margin-right: auto;
 }
 
-#bettingForm {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // background-color: blue;
-    position: relative;
-}
-
-#betBtn {
-    position: absolute;
-    left: 50%;
-}
-
 #createAccountWrapper {
+    width: 350px;
     margin-left: auto;
     margin-right: auto;
+    padding: 1rem;
+    background-color: #20334292;
 }
 
 #errorMessage {
     margin-left: auto;
     margin-right: auto;
+    padding: 1rem;
+    background-color: #20334292;
 }
 
 #blockHistory {
