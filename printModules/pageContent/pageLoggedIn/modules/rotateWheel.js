@@ -15,8 +15,11 @@ export default async function rotateWheel(betInput) {
     let oldWheelRotation = parseInt(rouletteDiv.style.transform.slice(7, -4));
 
     if (oldWheelRotation > 0) {
+        //console.log("oldBallRotation", oldBallRotation)
         ballTrack.style.transition = `transform 1ms`
-        ballTrack.style.transform = `rotate(${oldBallRotation - fullRotations * 360}deg)`;
+        ballTrack.style.transform = `rotate(${oldBallRotation + fullRotations * 2 * 360}deg)`;
+        oldBallRotation = parseInt(ballTrack.style.transform.slice(7, -4));
+        //console.log("oldBallRotation", oldBallRotation)
         rouletteDiv.style.transition = `transform 1ms`
         rouletteDiv.style.transform = `rotate(${oldWheelRotation - fullRotations * 360}deg)`;
     }
@@ -25,7 +28,7 @@ export default async function rotateWheel(betInput) {
     await new Promise(r => setTimeout(r, 50))
 
     ballTrack.style.transition = `transform ${spinSeconds}s`
-    ballTrack.style.transform = `rotate(${fullRotations * 360 + numberPositions[betInput]}deg)`;
+    ballTrack.style.transform = `rotate(-${(fullRotations*2) * 360 - numberPositions[betInput]}deg)`;
     rouletteDiv.style.transition = `transform ${spinSeconds}s`
     rouletteDiv.style.transform = `rotate(${fullRotations * 360 - numberPositions[betInput]}deg)`;
 
