@@ -7,26 +7,24 @@ import getUserObjectFromUserUUID from "../../../../userModules/getUserObjectFrom
 import printHeader from "../../../printHeader.js";
 import userClass from "../../../../userModules/userClass.js";
 import updateUsers from "../../../../userModules/updateUser.js";
-//Få den att print till sidan från api.js
-//Få den att göra det genom en funktion
-
+import rotateWheel from "./rotateWheel.js";
 
 export default async function betBtn() {
     let wagerInput = document.getElementById("wagerInput").value;
     let betInput = document.getElementById("betInput").value;
+
     let blockHistory = document.getElementById("blockHistory")
-    //console.log(wagerInput);
-    //console.log(betInput);
     let resultBetDiv = document.getElementById("resultBetDiv");
     let currentUser = getUserObjectFromUserUUID();
-    //console.log(currentUser.balance);
-    if (wagerInput <= currentUser.balance) {
+    let wheelStatus = localStorage.getItem("wheelStatus");
+
+    if (wagerInput <= currentUser.balance && wheelStatus != "spinning") {
         let data = await getResult(wagerInput, betInput);
-        console.log(data);
         if (data.success === true) {
+            resultBetDiv.innerHTML = "<p>ROLLING</p>"
+            await rotateWheel(data.roll.number);
             await addBlock(formatBetData(data, currentUser.username))
             let chain = JSON.parse(localStorage.getItem('chain'))
-            console.log('EFTER ADD BLOCK', chain);
             if (data.bet.win === true) { // lägg till lodräta sträck sen
                 resultBetDiv.innerHTML = `<p>YOU WIN ${data.bet.payout - data.bet.wager} Lagom Token</p>`
                 currentUser.updateBalance(data.bet.payout - data.bet.wager)
@@ -34,19 +32,24 @@ export default async function betBtn() {
                 printHeader("logInSuccess")
             } else {
                 resultBetDiv.innerHTML = `<p>YOU LOSE</p>`
-                console.log("currentUser", currentUser instanceof userClass);
                 currentUser.updateBalance(-data.bet.wager)
-                //function för updateUsers
                 updateUsers(currentUser)
                 printHeader("logInSuccess")
-                console.log(currentUser.balance);
             }
-        } else { console.log("fail") }
+        } else {
+            console.log("fail")
+            resultBetDiv.innerHTML = "<p>Invalid bet</p>"
+        }
         blockHistory.innerHTML = printBCLoggedIn();
     }
     else {
-        //console.log("not enough money", wagerInput, currentUser.balance);
-        resultBetDiv.innerHTML = `<p>You don't have enough tokens to bet ${wagerInput}</p>`;
+        wheelStatus = localStorage.getItem("wheelStatus");
+        if (wheelStatus == "spinning") {
+            console.log("already playing")
+        }
+        else {
+            resultBetDiv.innerHTML = `<p>You don't have enough tokens to bet ${wagerInput}</p>`;
+        }
     }
 }
 
