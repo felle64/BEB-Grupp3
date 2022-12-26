@@ -12,9 +12,7 @@
 }
 
 body {
-    background-color: rgb(15, 116, 15); //in case img dosen't load
-    background-image: url(../img/greenRouletteBackground.jpg);
-    background-size: cover;
+    background-color: rgb(15, 116, 15);
     font-family: monospace;
     font-weight: bold;
     display: flex;
@@ -23,12 +21,14 @@ body {
     margin: 0;
     overflow: hidden;
     color: white;
+    background-image: url(../img/background.png);
+    background-size: cover;
 }
 
 header {
     width: 100%;
     height: 120px;
-    background-color: rgba(100, 0, 0, 0);
+    background-color: #20334292;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -43,7 +43,7 @@ h2 {
 footer {
     height: 50px;
     width: 100%;
-    background-color: rgba(100, 0, 0, 0);
+    background-color: #20334292;
     margin-top: 20px;
     display: flex;
     align-items: center;
@@ -79,6 +79,7 @@ q {
     padding-right: 30px;
     margin-top: auto;
     margin-bottom: auto;
+    
 }
 #pageUnknownWrapper {
     display: flex;
@@ -95,7 +96,7 @@ q {
         position: relative;
         height: auto;
         outline: 3px #FFFFFF solid;
-      //  background-color: rgb(1, 37, 0);
+        background-color: #20334292;
         padding: 1rem;
         width: 100%;
 
