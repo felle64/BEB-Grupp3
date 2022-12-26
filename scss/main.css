@@ -13,9 +13,9 @@
   margin: 0;
   height: 400px;
   gap: 50px;
-  justify-self: start;
   justify-content: center;
-  padding-left: 10vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #container {
@@ -480,9 +480,10 @@ q {
   display: flex;
   flex-direction: column;
   width: 300px;
-  margin-left: 200px;
   padding: 1rem;
   background-color: rgba(32, 51, 66, 0.5725490196);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #bettingForm {
@@ -495,8 +496,13 @@ q {
 }
 
 #createAccountWrapper {
-  margin-left: 50%;
-  transform-origin: 0 -50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#errorMessage {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #blockHistory {
@@ -540,11 +546,6 @@ q {
   padding: 10px;
 }
 
-@media screen and (max-width: 1200px) {
-  #gameDiv {
-    padding-left: 5vw;
-  }
-}
 /* MOBILE */
 @media screen and (max-width: 600px) {
   header {

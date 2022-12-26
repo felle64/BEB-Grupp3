@@ -11,10 +11,10 @@ export default function logInSuccessContent() {
     
                 <div id="rouletteDiv"></div>
                
-                
+                ${printBettingForm()}
                 </div>
 
-                ${printBettingForm()}
+              
                 <div id="blockHistory">
                 ${printBCLoggedIn()}
                 </div>`;
