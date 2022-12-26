@@ -7,6 +7,7 @@
 // * {
 //     outline: 1px solid red;
 // }
+
 html {
     margin: 0;
     padding: 0;
@@ -105,9 +106,11 @@ q {
     display: flex;
     flex-direction: column;
     width: 300px;
-    margin-left: 200px;
+    // margin-left: 200px;
     padding: 1rem;
     background-color: #20334292;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #bettingForm {
@@ -124,8 +127,13 @@ q {
 }
 
 #createAccountWrapper {
-    margin-left: 50%;
-    transform-origin: 0 -50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#errorMessage {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #blockHistory {
@@ -173,11 +181,11 @@ q {
 }
 
 
-@media screen and (max-width: 1200px) {
-    #gameDiv {
-        padding-left: 5vw;
-    }
-}
+// @media screen and (max-width: 1200px) {
+//     #gameDiv {
+//         padding-left: 5vw;
+//     }
+// }
 
 /* MOBILE */
 @media screen and (max-width: 600px) {
