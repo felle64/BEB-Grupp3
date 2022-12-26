@@ -341,29 +341,12 @@
   left: 83px;
 }
 
-@-webkit-keyframes wheelRotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-
 @keyframes wheelRotate {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(359deg);
-  }
-}
-@-webkit-keyframes ballRotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-359deg);
   }
 }
 @keyframes ballRotate {
@@ -397,8 +380,6 @@
 
 body {
   background-color: rgb(15, 116, 15);
-  background-image: url(../img/greenRouletteBackground.jpg);
-  background-size: cover;
   font-family: monospace;
   font-weight: bold;
   display: flex;
@@ -407,12 +388,14 @@ body {
   margin: 0;
   overflow: hidden;
   color: white;
+  background-image: url(../img/background.png);
+  background-size: cover;
 }
 
 header {
   width: 100%;
   height: 120px;
-  background-color: rgb(100, 0, 0);
+  background-color: rgba(32, 51, 66, 0.5725490196);
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -426,7 +409,7 @@ h2 {
 footer {
   height: 50px;
   width: 100%;
-  background-color: rgb(100, 0, 0);
+  background-color: rgba(32, 51, 66, 0.5725490196);
   margin-top: 20px;
   display: flex;
   align-items: center;
@@ -481,6 +464,7 @@ q {
   position: relative;
   height: auto;
   outline: 3px #FFFFFF solid;
+  background-color: rgba(32, 51, 66, 0.5725490196);
   padding: 1rem;
   width: 100%;
 }
@@ -630,8 +614,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
