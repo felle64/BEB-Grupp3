@@ -10,6 +10,8 @@
 
 #gameDiv {
   display: flex;
+  margin: 0;
+  height: 400px;
 }
 
 #container {
@@ -389,15 +391,26 @@
     background: rgba(32, 51, 66, 0.5725490196);
   }
 }
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: rgb(15, 116, 15);
+  box-sizing: border-box;
   font-family: monospace;
   font-weight: bold;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
   min-height: 100vh;
+  max-width: 100%;
   margin: 0;
-  overflow: hidden;
+  padding: 0;
+  overflow: auto;
   color: white;
   background-image: url(../img/background.png);
   background-size: cover;
@@ -418,13 +431,16 @@ h2 {
 }
 
 footer {
-  height: 50px;
-  width: 100%;
+  height: 100px;
   background-color: rgba(32, 51, 66, 0.5725490196);
-  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#footerContentDiv {
+  width: 50%;
+  text-align: center;
 }
 
 a {
@@ -449,14 +465,12 @@ q {
 
 #contentDiv {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   height: auto;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-top: auto;
-  margin-bottom: auto;
+  width: 100%;
 }
 
 #pageUnknownWrapper {
@@ -466,7 +480,7 @@ q {
 }
 
 #blockHistory {
-  height: 50vh;
+  height: 500px;
   overflow-y: scroll;
 }
 #blockHistory .listBlock {
@@ -532,8 +546,10 @@ q {
   }
   footer {
     height: auto;
+    margin: 0;
   }
-  #footerContent {
+  #footerContentDiv {
+    margin: 0;
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 20px;

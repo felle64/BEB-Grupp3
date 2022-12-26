@@ -1,16 +1,19 @@
-#rouletteDiv{
+#rouletteDiv {
 	transition: transform 5s;
 	transform-origin: 155px 155px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	height: 312px;
 	margin-top: 40px;
 }
 
 #gameDiv {
-    display: flex;
-  //  flex-direction: column;
+	display: flex;
+	margin: 0;
+	height: 400px;
+	// flex-wrap: wrap;
+	//  flex-direction: column;
 }
 
 #container {
@@ -290,7 +293,7 @@
 	top: 50px;
 	border-radius: 100%;
 	z-index: 2;
-	
+
 	transition: transform 5s;
 	//animation: ballRotate 1s linear infinite;
 }
