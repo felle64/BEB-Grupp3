@@ -88,10 +88,10 @@ q {
 
 #contentDiv {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: auto;
     width: 100%;
     // padding-left: 30px;
@@ -105,11 +105,33 @@ q {
     display: flex;
     flex-direction: column;
     width: 300px;
+    margin-left: 200px;
+    padding: 1rem;
+    background-color: #20334292;
+}
+
+#bettingForm {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // background-color: blue;
+    position: relative;
+}
+
+#betBtn {
+    position: absolute;
+    left: 50%;
+}
+
+#createAccountWrapper {
+    margin-left: 50%;
+    transform-origin: 0 -50%;
 }
 
 #blockHistory {
-    height: 500px;
-    overflow-y: scroll;
+    height: calc(100vh - 220px);
+    overflow-y: auto;
+    // justify-self: flex-end;
 
     .listBlock {
         box-sizing: border-box;
@@ -148,6 +170,13 @@ q {
     text-align: center;
     margin-top: 10px;
     padding: 10px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    #gameDiv {
+        padding-left: 5vw;
+    }
 }
 
 /* MOBILE */

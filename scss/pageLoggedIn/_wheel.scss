@@ -12,6 +12,10 @@
 	display: flex;
 	margin: 0;
 	height: 400px;
+	gap: 50px;
+	justify-self: start;
+	justify-content: center;
+	padding-left: 10vw;
 	// flex-wrap: wrap;
 	//  flex-direction: column;
 }
