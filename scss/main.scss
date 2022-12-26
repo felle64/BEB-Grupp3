@@ -1,15 +1,6 @@
 @import "./pageLoggedIn/wheel";
+@import "./pageLoggedIn/bettingForm";
 
-#rouletteDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#gameDiv {
-    display: flex;
-  //  flex-direction: column;
-}
 
 body {
     background-color: rgb(15, 116, 15);

@@ -2,6 +2,7 @@
 export default function buildWheel() {
 
   let rouletteDiv = document.getElementById("rouletteDiv");
+  rouletteDiv.style.transform = "rotate(0deg)";
 
   let wheel = document.createElement('div');
   wheel.setAttribute('class', 'wheel');
@@ -29,6 +30,7 @@ export default function buildWheel() {
   pocketsRim.setAttribute('class', 'pocketsRim');
   wheel.append(pocketsRim);
   let ballTrack = document.createElement('div');
+  ballTrack.style.transform = "rotate(0deg)";
   ballTrack.setAttribute('class', 'ballTrack');
   let ball = document.createElement('div');
   ball.setAttribute('class', 'ball');
