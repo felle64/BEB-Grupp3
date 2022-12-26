@@ -1,6 +1,6 @@
 @import "./pageLoggedIn/wheel";
 @import "./pageLoggedIn/bettingForm";
-
+@import "./pageLoggedIn/blinkAnimationNewBlock";
 
 body {
     background-color: rgb(15, 116, 15);
@@ -23,7 +23,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
-  //  border : 2px solid black;
+    //  border : 2px solid black;
 }
 
 h2 {
@@ -39,16 +39,18 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-  //  border : 2px solid black;
+    //  border : 2px solid black;
 }
+
 a {
     color: rgb(86, 255, 114);
 }
+
 button {
     background-color: gold;
     padding: 10px;
     font-weight: bold;
-    
+
 }
 
 button:active {
@@ -60,6 +62,7 @@ q {
     padding-top: 30px;
     font-weight: bold;
 }
+
 #contentDiv {
     display: flex;
     flex-direction: row;
@@ -70,13 +73,15 @@ q {
     padding-right: 30px;
     margin-top: auto;
     margin-bottom: auto;
-    
+
 }
+
 #pageUnknownWrapper {
     display: flex;
     flex-direction: column;
     width: 300px;
 }
+
 #blockHistory {
     height: 50vh;
     overflow-y: scroll;

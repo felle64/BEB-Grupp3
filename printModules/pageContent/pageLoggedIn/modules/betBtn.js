@@ -30,17 +30,24 @@ export default async function betBtn() {
                 currentUser.updateBalance(data.bet.payout - data.bet.wager)
                 updateUsers(currentUser)
                 printHeader("logInSuccess")
+                blockHistory.innerHTML = printBCLoggedIn();
+                let latestBlock = document.getElementById("blockHistory").firstChild
+                latestBlock.classList.add("blink");
             } else {
                 resultBetDiv.innerHTML = `<p>YOU LOSE</p>`
                 currentUser.updateBalance(-data.bet.wager)
                 updateUsers(currentUser)
                 printHeader("logInSuccess")
+                blockHistory.innerHTML = printBCLoggedIn();
+                let latestBlock = document.getElementById("blockHistory").firstChild
+                latestBlock.classList.add("blink");
             }
         } else {
             console.log("fail")
             resultBetDiv.innerHTML = "<p>Invalid bet</p>"
         }
-        blockHistory.innerHTML = printBCLoggedIn();
+
+
     }
     else {
         wheelStatus = localStorage.getItem("wheelStatus");
