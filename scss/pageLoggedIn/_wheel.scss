@@ -5,13 +5,14 @@
 	justify-content: center;
 	align-items: center;
 	height: 312px;
-	margin-top: 40px;
+	//margin-top: 40px;
+	align-self: center;
 }
 
 #gameDiv {
 	display: flex;
 	margin: 0;
-	height: 400px;
+	height: calc(100vh - 220px);
 	gap: 50px;
 	// justify-self: start;
 	justify-content: center;

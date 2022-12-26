@@ -41,16 +41,19 @@ export default function loginSuccessCode() {
         console.log("button clicked", button.value);
         if (button.value == "number") {
             let betInput = document.getElementById("betInput");
+            let betInputLabel = document.getElementById("betInputLabel");
             betInput.value = 1;
             betInput.max = 36;
             betInput.min = 0;
             betInput.type = "number";
             betInput.style.display = "block";
+            betInputLabel.style.display = "block";
             toggleClicked(button);
         }
         else {
             let betInput = document.getElementById("betInput");
             betInput.style.display = "none";
+            betInputLabel.style.display = "none";
             betInput.type = "text";
             betInput.value = button.value;
             toggleClicked(button);

@@ -4,9 +4,9 @@
 
 
 
-// * {
-//     outline: 1px solid red;
-// }
+* {
+    outline: 1px solid red;
+}
 
 html {
     margin: 0;
@@ -113,17 +113,13 @@ q {
     margin-right: auto;
 }
 
-#bettingForm {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // background-color: blue;
-    position: relative;
-}
 
-#betBtn {
-    position: absolute;
-    left: 50%;
+
+#betInput {
+    // position: absolute;
+    // left: 50%;
+    // width: 100px;
+    float: right;
 }
 
 #createAccountWrapper {
