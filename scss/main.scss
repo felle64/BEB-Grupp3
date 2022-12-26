@@ -4,9 +4,9 @@
 
 
 
-* {
-    outline: 1px solid red;
-}
+// * {
+//     outline: 1px solid red;
+// }
 
 html {
     margin: 0;
@@ -113,23 +113,19 @@ q {
     margin-right: auto;
 }
 
-
-
-#betInput {
-    // position: absolute;
-    // left: 50%;
-    // width: 100px;
-    float: right;
-}
-
 #createAccountWrapper {
+    width: 350px;
     margin-left: auto;
     margin-right: auto;
+    padding: 1rem;
+    background-color: #20334292;
 }
 
 #errorMessage {
     margin-left: auto;
     margin-right: auto;
+    padding: 1rem;
+    background-color: #20334292;
 }
 
 #blockHistory {

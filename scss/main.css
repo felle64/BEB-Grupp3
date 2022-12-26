@@ -367,7 +367,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .bettingButtons {
@@ -412,10 +412,15 @@
 
 #betInput {
   float: right;
+  width: 43px;
 }
 
 #wagerInput {
-  width: 35px;
+  width: 65px;
+}
+
+#betInputLabel {
+  width: 50px;
 }
 
 .blink {
@@ -430,10 +435,6 @@
     background: rgba(32, 51, 66, 0.5725490196);
   }
 }
-* {
-  outline: 1px solid red;
-}
-
 html {
   margin: 0;
   padding: 0;
@@ -525,18 +526,19 @@ q {
   margin-right: auto;
 }
 
-#betInput {
-  float: right;
-}
-
 #createAccountWrapper {
+  width: 350px;
   margin-left: auto;
   margin-right: auto;
+  padding: 1rem;
+  background-color: rgba(32, 51, 66, 0.5725490196);
 }
 
 #errorMessage {
   margin-left: auto;
   margin-right: auto;
+  padding: 1rem;
+  background-color: rgba(32, 51, 66, 0.5725490196);
 }
 
 #blockHistory {
