@@ -1,7 +1,7 @@
 export default async function getResult(wagerInput, betInput) {
     console.log(wagerInput);
     console.log(betInput);
-    const apiUrl = `http://80.98.140.31:5001/api/play?wager=${wagerInput}&bet=${betInput}`
+    const apiUrl = `https://larslund.in:5001/api/play?wager=${wagerInput}&bet=${betInput}`
     console.log(apiUrl);
     let data = fetch(apiUrl)
         .then(res => res.json())
