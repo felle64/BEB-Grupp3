@@ -21,8 +21,7 @@
 .wheel {
   height: 312px;
   width: 312px;
-  -webkit-animation: wheelRotate 999999s linear infinite;
-          animation: wheelRotate 999999s linear infinite;
+  animation: wheelRotate 999999s linear infinite;
 }
 
 .block {
@@ -378,6 +377,18 @@
   color: white;
 }
 
+.blink {
+  animation: blinker 1s step-start 3;
+}
+
+@keyframes blinker {
+  50% {
+    background: rgba(32, 51, 66, 0.8666666667);
+  }
+  100% {
+    background: rgba(32, 51, 66, 0.5725490196);
+  }
+}
 body {
   background-color: rgb(15, 116, 15);
   font-family: monospace;
