@@ -1,3 +1,17 @@
+#rouletteDiv {
+  transition: transform 5s;
+  transform-origin: 155px 155px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 312px;
+  margin-top: 40px;
+}
+
+#gameDiv {
+  display: flex;
+}
+
 #container {
   display: flex;
   justify-content: center;
@@ -7,9 +21,8 @@
 .wheel {
   height: 312px;
   width: 312px;
-  -webkit-animation: wheelRotate 5s linear infinite;
-          animation: wheelRotate 5s linear infinite;
-  margin-top: 40px;
+  -webkit-animation: wheelRotate 999999s linear infinite;
+          animation: wheelRotate 999999s linear infinite;
 }
 
 .block {
@@ -254,8 +267,7 @@
   top: 50px;
   border-radius: 100%;
   z-index: 2;
-  -webkit-animation: ballRotate 1s linear infinite;
-          animation: ballRotate 1s linear infinite;
+  transition: transform 5s;
 }
 
 .ball {
@@ -362,14 +374,25 @@
     transform: rotate(-359deg);
   }
 }
-#rouletteDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.bettingButtons {
+  padding: 10px calc(50% - 80px);
 }
-
-#gameDiv {
-  display: flex;
+.bettingButtons .bettingButton {
+  width: 67px;
+  margin: 0 auto;
+}
+.bettingButtons .clicked {
+  border: solid white 2px;
+}
+.bettingButtons #btnGreen {
+  background-color: green;
+}
+.bettingButtons #btnRed {
+  background-color: red;
+}
+.bettingButtons #btnBlack {
+  background-color: black;
+  color: white;
 }
 
 body {
@@ -389,7 +412,7 @@ body {
 header {
   width: 100%;
   height: 120px;
-  background-color: rgba(100, 0, 0, 0);
+  background-color: rgb(100, 0, 0);
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -403,7 +426,7 @@ h2 {
 footer {
   height: 50px;
   width: 100%;
-  background-color: rgba(100, 0, 0, 0);
+  background-color: rgb(100, 0, 0);
   margin-top: 20px;
   display: flex;
   align-items: center;

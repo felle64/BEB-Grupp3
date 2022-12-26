@@ -1,3 +1,18 @@
+#rouletteDiv{
+	transition: transform 5s;
+	transform-origin: 155px 155px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	height: 312px;
+	margin-top: 40px;
+}
+
+#gameDiv {
+    display: flex;
+  //  flex-direction: column;
+}
+
 #container {
 	display: flex;
 	justify-content: center;
@@ -9,8 +24,9 @@
 	width: 312px;
 	//position: relative;
 	//left: -75px;
-	animation: wheelRotate 5s linear infinite;
-	margin-top: 40px;
+	//om denna är noll så flyttas hela hjulet, men högt nummer saktar ner den basically till 0
+	animation: wheelRotate 999999s linear infinite;
+	//margin-top: 40px;
 	// margin-bottom: 50px;
 }
 
@@ -274,7 +290,9 @@
 	top: 50px;
 	border-radius: 100%;
 	z-index: 2;
-	animation: ballRotate 1s linear infinite;
+	
+	transition: transform 5s;
+	//animation: ballRotate 1s linear infinite;
 }
 
 .ball {
