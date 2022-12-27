@@ -28,7 +28,6 @@ export default function printHeader(state) {
 
     let validationButton = document.getElementById("validationButton");
       validationButton.addEventListener("click", () => {
-        console.log("validate");
         validateChain();
       });
 
@@ -52,7 +51,6 @@ export default function printHeader(state) {
         validateChain()
 
         validationButton.addEventListener("click", () => {
-          console.log("validate");
           validateChain();
         });
 

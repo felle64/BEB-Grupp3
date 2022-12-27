@@ -17,4 +17,3 @@ export default async function initUsers() {
     };
     return users;
 }
-console.log(userClass);

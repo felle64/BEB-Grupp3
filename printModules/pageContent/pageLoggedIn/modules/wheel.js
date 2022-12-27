@@ -57,9 +57,3 @@ export default function buildWheel() {
   rouletteDiv.append(wheel);
 }
 
-// function setBet(n, t, o){
-// 	console.log(n);
-// 	console.log(t);
-// 	console.log(o);
-// }
-

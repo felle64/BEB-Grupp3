@@ -5,7 +5,6 @@ export default function updateUsers (userUpdate){
         return user.uuid === userUpdate.uuid;
     })
     let i = users.indexOf(foundUser);
-    console.log(userUpdate);
     users[i]=userUpdate
     localStorage.setItem('users', JSON.stringify(users))
 }

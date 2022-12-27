@@ -4,7 +4,6 @@ import validateChain from "./validateChain.js";
 
 //Takes bet and user information
 export default async function addBlock(blockData) {
-    //console.log("last block test",chain.blockchain[chain.blockchain.length-1]);
     //Also encrypt the user data
 
     //Fetches current chain from localStorage

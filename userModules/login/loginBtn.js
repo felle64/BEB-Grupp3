@@ -22,7 +22,6 @@ export default async function loginBtn(e) {
         }
     }
     else {//if no user was found:
-        //console.log("user was not found");
     }
 
     if (logInResultSuccess) {

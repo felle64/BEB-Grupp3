@@ -44,7 +44,6 @@ export default async function betBtn() {
             }
             await addBlock(formatBetData(data, currentUser))
         } else {
-            console.log("fail")
             resultBetDiv.innerHTML = "<p>Invalid bet</p>"
         }
 
@@ -53,7 +52,6 @@ export default async function betBtn() {
     else {
         wheelStatus = localStorage.getItem("wheelStatus");
         if (wheelStatus == "spinning") {
-            console.log("already playing")
         }
         else {
             resultBetDiv.innerHTML = `<p>You don't have enough tokens to bet ${wagerInput}</p>`;
