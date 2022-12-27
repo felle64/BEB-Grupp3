@@ -1,8 +1,6 @@
 
 export default function formatBetData(data, currentUser) {
 
-    console.log('formatbetdata', data);
-    console.log('formatbetdata cu', currentUser);
     let formattedBetData =
 
 

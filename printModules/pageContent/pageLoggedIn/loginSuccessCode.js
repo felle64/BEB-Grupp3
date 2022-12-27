@@ -38,7 +38,6 @@ export default function loginSuccessCode() {
     let betInput = document.getElementById("betInput");
 
     function selectBet(button) {
-        console.log("button clicked", button.value);
         if (button.value == "number") {
             let betInput = document.getElementById("betInput");
             let betInputLabel = document.getElementById("betInputLabel");
@@ -61,8 +60,6 @@ export default function loginSuccessCode() {
     }
     function toggleClicked(button) {
         let buttons = document.getElementsByClassName("bettingButton");
-        console.log(typeof (buttons));
-        console.log(buttons[0]);
         for (let i = 0; i < buttons.length; i++) {
             buttons[i].classList.remove("clicked");
         }

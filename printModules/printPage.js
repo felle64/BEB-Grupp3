@@ -17,26 +17,21 @@ export default function printPage(state) {
     let contentDiv = document.getElementById('contentDiv');
     switch (state) {
         case "unknown": {
-            // console.log("hi from unkown");
             contentDiv.innerHTML = pageUnknownContent();
             pageUnknownCode();
             break;
         }
         case "logInSuccess": {
-            // console.log("Hi from logInSuccess");
-            console.log("logInSuccess");
             contentDiv.innerHTML = logInSuccessContent();
             loginSuccessCode();
             break;
         }
         case "failedLogInAttempt": {
-            // console.log("Hi from failedLogInAttempt");
             contentDiv.innerHTML = failedLoginContent();
             failedLoginCode();
             break;
         }
         case "createNewUser": {
-            // console.log("Hi from CreateNewUser");
             contentDiv.innerHTML = createNewUserContent();
             createNewUserCode();
             break;

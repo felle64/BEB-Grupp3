@@ -15,5 +15,4 @@ export default async function addUser(username, password) {
 
     //SPARA
     localStorage.setItem("users", JSON.stringify(users));
-    console.log(`User ${username} created.`);
 }
