@@ -10,9 +10,9 @@ export default function formatBetData(data, currentUser) {
         "roll": data.roll
         ,
         "user": {
-            "UUID": "0000-0000-0000-0001",
-            "username": currentUser,
-            "balance": 100,
+            "UUID": currentUser.uuid,
+            "username": currentUser.username,
+            "balance": currentUser.balance,
             "bet": data.bet
 
         }

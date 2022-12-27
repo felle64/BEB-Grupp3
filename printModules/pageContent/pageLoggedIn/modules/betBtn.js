@@ -23,7 +23,7 @@ export default async function betBtn() {
         if (data.success === true) {
             resultBetDiv.innerHTML = "<p>ROLLING</p>"
             await rotateWheel(data.roll.number);
-            await addBlock(formatBetData(data, currentUser.username))
+           
             let chain = JSON.parse(localStorage.getItem('chain'))
             if (data.bet.win === true) { // lägg till lodräta sträck sen
                 resultBetDiv.innerHTML = `<p>YOU WIN ${data.bet.payout - data.bet.wager} Lagom Token</p>`
@@ -42,6 +42,7 @@ export default async function betBtn() {
                 let latestBlock = document.getElementById("blockHistory").firstChild
                 latestBlock.classList.add("blink");
             }
+            await addBlock(formatBetData(data, currentUser))
         } else {
             console.log("fail")
             resultBetDiv.innerHTML = "<p>Invalid bet</p>"
