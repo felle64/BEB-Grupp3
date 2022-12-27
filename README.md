@@ -2,6 +2,8 @@
 ---
 Gruppuppgift som är lagom kul
 
+Live preview: [Lagom Roulette](https://felle64.github.io/BEB-Grupp3/)<br>
+
 Crypto casinos offer a new and exciting way to gamble online, using cryptocurrencies such as Bitcoin and Ethereum to place bets and play games. These casinos offer fast and secure transactions, anonymity, and the ability to access games from anywhere in the world.
 
 How it works:
