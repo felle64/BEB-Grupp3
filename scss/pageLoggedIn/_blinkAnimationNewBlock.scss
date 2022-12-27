@@ -1,0 +1,13 @@
+.blink {
+    animation: blinker 1s step-start 3;
+}
+
+@keyframes blinker {
+    50% {
+        background: #203342dd;
+    }
+
+    100% {
+        background: #20334292;
+    }
+}
