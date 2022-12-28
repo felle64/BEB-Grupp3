@@ -23,26 +23,23 @@ export default async function betBtn() {
         if (data.success === true) {
             resultBetDiv.innerHTML = "<p>ROLLING</p>"
             await rotateWheel(data.roll.number);
-           
+
             let chain = JSON.parse(localStorage.getItem('chain'))
             if (data.bet.win === true) { // lägg till lodräta sträck sen
                 resultBetDiv.innerHTML = `<p>YOU WIN ${data.bet.payout - data.bet.wager} Lagom Token</p>`
                 currentUser.updateBalance(data.bet.payout - data.bet.wager)
-                updateUsers(currentUser)
-                printHeader("logInSuccess")
-                blockHistory.innerHTML = printBCLoggedIn();
-                let latestBlock = document.getElementById("blockHistory").firstChild
-                latestBlock.classList.add("blink");
             } else {
                 resultBetDiv.innerHTML = `<p>YOU LOSE</p>`
                 currentUser.updateBalance(-data.bet.wager)
-                updateUsers(currentUser)
-                printHeader("logInSuccess")
-                blockHistory.innerHTML = printBCLoggedIn();
-                let latestBlock = document.getElementById("blockHistory").firstChild
-                latestBlock.classList.add("blink");
             }
+
+            updateUsers(currentUser)
             await addBlock(formatBetData(data, currentUser))
+            printHeader("logInSuccess")
+            blockHistory.innerHTML = printBCLoggedIn();
+            let latestBlock = document.getElementById("blockHistory").firstChild
+            latestBlock.classList.add("blink");
+
         } else {
             resultBetDiv.innerHTML = "<p>Invalid bet</p>"
         }
