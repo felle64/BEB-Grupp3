@@ -1,4 +1,3 @@
-import getUserObjectFromUserUUID from "./getUserObjectFromUserUUID.js";
 export default function updateUsers (userUpdate){
     let users = JSON.parse(localStorage.getItem('users'))
     let foundUser = users.find(user => {

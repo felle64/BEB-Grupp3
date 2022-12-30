@@ -1,5 +1,4 @@
 import addUser from './createNewUser/addUser.js';
-import userClass from './userClass.js'
 
 export default async function initUsers() {
     let users = [];
