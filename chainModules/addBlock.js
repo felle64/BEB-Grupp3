@@ -1,6 +1,5 @@
 import block from "./block.js";
 import calculateHash from "./calculateHash.js";
-import validateChain from "./validateChain.js";
 
 //Takes bet and user information
 export default async function addBlock(blockData) {

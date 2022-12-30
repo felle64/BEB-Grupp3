@@ -1,5 +1,4 @@
 //Takes blockchain variable, or name of localStorage variable for the blockchain
-import block from "./block.js";
 import calculateHash from "./calculateHash.js";
 
 export default async function validateChain(){

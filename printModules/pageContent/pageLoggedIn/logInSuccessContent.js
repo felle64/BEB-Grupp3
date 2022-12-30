@@ -1,9 +1,7 @@
-import buildWheel from "./modules/wheel.js";
-import printBettingForm from "./modules/printBettingForm.js";
 import printBCLoggedIn from "./modules/printBCLoggedIn.js";
+import printBettingForm from "./modules/printBettingForm.js";
 
 export default function logInSuccessContent() {
-    let currentUser = localStorage.getItem("currentUser");
     let innerHTML = ""
 
 

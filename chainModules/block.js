@@ -1,4 +1,3 @@
-import calculateHash from "./calculateHash.js";
 
 export default class block {
     constructor(data, index = 0, prevHash = "") {

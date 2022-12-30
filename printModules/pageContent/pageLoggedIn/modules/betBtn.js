@@ -1,12 +1,10 @@
 import getResult from "../../../../bettingModules/getResult.js";
 import addBlock from "../../../../chainModules/addBlock.js";
+import getUserObjectFromUserUUID from "../../../../userModules/getUserObjectFromUserUUID.js";
+import updateUsers from "../../../../userModules/updateUser.js";
+import printHeader from "../../../printHeader.js";
 import formatBetData from "./formatBetData.js";
 import printBCLoggedIn from "./printBCLoggedIn.js";
-import printPage from "../../../printPage.js";
-import getUserObjectFromUserUUID from "../../../../userModules/getUserObjectFromUserUUID.js";
-import printHeader from "../../../printHeader.js";
-import userClass from "../../../../userModules/userClass.js";
-import updateUsers from "../../../../userModules/updateUser.js";
 import rotateWheel from "./rotateWheel.js";
 
 export default async function betBtn() {

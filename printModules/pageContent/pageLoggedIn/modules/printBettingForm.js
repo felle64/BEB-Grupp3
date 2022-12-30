@@ -1,4 +1,3 @@
-import getResult from "../../../../bettingModules/getResult.js";
 export default function printBettingForm() {
 
     let innerHTML = `

@@ -1,15 +1,11 @@
-import pageUnknownContent from "./pageContent/pageLoggedOut/pageUnknown/pageUnknownContent.js"
-//import createNewAccount from "../userModules/createNewUser/createNewAccountBtn.js";
-import logInSuccessContent from "./pageContent/pageLoggedIn/logInSuccessContent.js";
-//import buildWheel from "./pageContent/pageLoggedIn/modules/wheel.js";
-import createNewUserText from "./pageContent/pageLoggedOut/createNewUserContent.js";
-//import betBtnEl from "./pageContent/pageLoggedIn/modules/betBtn.js";
-import failedLoginContent from "./pageContent/pageLoggedOut/pageUnknown/failedLoginContent.js";
-import failedLoginCode from "./pageContent/pageLoggedOut/pageUnknown/failedLoginCode.js";
-import pageUnknownCode from "./pageContent/pageLoggedOut/pageUnknown/pageUnknownCode.js";
 import loginSuccessCode from "./pageContent/pageLoggedIn/loginSuccessCode.js";
+import logInSuccessContent from "./pageContent/pageLoggedIn/logInSuccessContent.js";
 import createNewUserCode from "./pageContent/pageLoggedOut/createNewUserCode.js";
 import createNewUserContent from "./pageContent/pageLoggedOut/createNewUserContent.js";
+import failedLoginCode from "./pageContent/pageLoggedOut/pageUnknown/failedLoginCode.js";
+import failedLoginContent from "./pageContent/pageLoggedOut/pageUnknown/failedLoginContent.js";
+import pageUnknownCode from "./pageContent/pageLoggedOut/pageUnknown/pageUnknownCode.js";
+import pageUnknownContent from "./pageContent/pageLoggedOut/pageUnknown/pageUnknownContent.js";
 
 // Main function to display content in the "contentDiv" 
 export default function printPage(state) {
