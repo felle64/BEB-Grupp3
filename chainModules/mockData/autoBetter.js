@@ -3,6 +3,7 @@ import addBlock from "../addBlock.js";
 import formatBetData from "../../printModules/pageContent/pageLoggedIn/modules/formatBetData.js";
 import printBCLoggedOut from "../../printModules/pageContent/pageLoggedOut/pageUnknown/modules/printBCLoggedOut.js";
 import printBCLoggedIn from "../../printModules/pageContent/pageLoggedIn/modules/printBCLoggedIn.js";
+import updateUsers from "../../userModules/updateUser.js";
 
 export default async function autoBetter() {
 
@@ -18,7 +19,7 @@ export default async function autoBetter() {
 
         //Wait a bit, and longer if logged in
         let waitTime = 12000;
-        if (state == "logInSuccess"){
+        if (state == "logInSuccess") {
             waitTime = 24000;
         }
         await new Promise(r => setTimeout(r, waitTime));
@@ -46,6 +47,12 @@ export default async function autoBetter() {
             printBC(state);
             let latestBlock = document.getElementById("blockHistory").firstChild
             latestBlock.classList.add("blink");
+            if (data.bet.win === true) {
+                users[randomID].balance += data.bet.payout - data.bet.wager;
+            } else {
+                users[randomID].balance -= data.bet.wager;
+            }
+            updateUsers(users[randomID]);
         }
     }
 }
