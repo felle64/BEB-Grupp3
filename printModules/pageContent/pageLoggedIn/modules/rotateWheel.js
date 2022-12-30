@@ -28,7 +28,7 @@ export default async function rotateWheel(betInput) {
     ballTrack.style.transition = `transform ${spinSeconds}s`
     ballTrack.style.transform = `rotate(-${(fullRotations*2) * 360 - numberPositions[betInput]}deg)`;
     rouletteDiv.style.transition = `transform ${spinSeconds}s`
-    rouletteDiv.style.transform = `rotate(${fullRotations * 360 - numberPositions[betInput]}deg)`;
+    rouletteDiv.style.transform = `rotate(${fullRotations * 360 - numberPositions[betInput] - 5}deg)`;
 
     //Vänta ut tiden det tar för hjulet att snurra
     await new Promise(r => setTimeout(r, spinSeconds * 1000));
