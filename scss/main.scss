@@ -76,7 +76,9 @@ button {
     font-weight: bold;
 
 }
-
+#depositBtn{
+    margin-top: 21%;
+}
 button:active {
     box-shadow: 2px 2px black;
 }
@@ -101,7 +103,13 @@ q {
     // margin-bottom: auto;
 
 }
-
+#depositWrapper {
+    width: 300px;
+    height: 150px;
+    padding: 1rem;
+    margin: auto;
+    background-color: #20334292;
+}
 #pageUnknownWrapper {
     display: flex;
     flex-direction: column;
