@@ -48,12 +48,12 @@ export default function printHeader(state) {
         <p>You are logged in as: ${foundUser.username}</p>
         <p>Account Balance: ${foundUser.balance}</p>
         <button id="logOutBtn">Log Out</button>
-        `
+        `;
         validateChain()
         let depositBtn = document.getElementById("depositBtn");
         depositBtn.addEventListener("click", () => { 
           console.log("deposit");
-          deposit();
+          contentDiv.innerHTML = deposit();
         });
         
         validationButton.addEventListener("click", () => {
