@@ -3,6 +3,7 @@ import validateChain from "../chainModules/validateChain.js";
 import printPage from "./printPage.js";
 import loginBtn from "../userModules/login/loginBtn.js";
 import getUserObjectFromUserUUID from "../userModules/getUserObjectFromUserUUID.js";
+import deposit from "./pageContent/pageLoggedIn/modules/deposit.js";
 
 export default function printHeader(state) {
 
@@ -43,13 +44,18 @@ export default function printHeader(state) {
 
     let foundUser = getUserObjectFromUserUUID();
 
-    headerDiv.innerHTML = `<div id="validationDiv"><div id="validationResultDiv"></div><button id="validationButton">Validate</button></div>
+    headerDiv.innerHTML = `<div id="deposit"><button id="depositBtn">Deposit</button></div><div id="validationDiv"><div id="validationResultDiv"></div><button id="validationButton">Validate</button></div>
         <p>You are logged in as: ${foundUser.username}</p>
         <p>Account Balance: ${foundUser.balance}</p>
         <button id="logOutBtn">Log Out</button>
-        `
+        `;
         validateChain()
-
+        let depositBtn = document.getElementById("depositBtn");
+        depositBtn.addEventListener("click", () => { 
+          console.log("deposit");
+          contentDiv.innerHTML = deposit();
+        });
+        
         validationButton.addEventListener("click", () => {
           validateChain();
         });

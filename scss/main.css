@@ -27,7 +27,8 @@
 .wheel {
   height: 312px;
   width: 312px;
-  animation: wheelRotate 999999s linear infinite;
+  -webkit-animation: wheelRotate 999999s linear infinite;
+          animation: wheelRotate 999999s linear infinite;
 }
 
 .block {
@@ -346,12 +347,29 @@
   left: 83px;
 }
 
+@-webkit-keyframes wheelRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 @keyframes wheelRotate {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes ballRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-359deg);
   }
 }
 @keyframes ballRotate {
@@ -424,7 +442,17 @@
 }
 
 .blink {
-  animation: blinker 1s step-start 3;
+  -webkit-animation: blinker 1s step-start 3;
+          animation: blinker 1s step-start 3;
+}
+
+@-webkit-keyframes blinker {
+  50% {
+    background: rgba(32, 51, 66, 0.8666666667);
+  }
+  100% {
+    background: rgba(32, 51, 66, 0.5725490196);
+  }
 }
 
 @keyframes blinker {
@@ -497,6 +525,10 @@ button {
   font-weight: bold;
 }
 
+#depositBtn {
+  margin-top: 21%;
+}
+
 button:active {
   box-shadow: 2px 2px black;
 }
@@ -514,6 +546,14 @@ q {
   justify-content: space-between;
   height: auto;
   width: 100%;
+}
+
+#depositWrapper {
+  width: 300px;
+  height: 150px;
+  padding: 1rem;
+  margin: auto;
+  background-color: rgba(32, 51, 66, 0.5725490196);
 }
 
 #pageUnknownWrapper {
@@ -703,7 +743,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
